@@ -1,0 +1,21 @@
+﻿<Window x:Class="CrudMaster.mainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrudMaster"
+        mc:Ignorable="d"
+        Title="Microtec Gerenciador" Height="620" Width="512" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF333337">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF080851" Offset="0"/>
+                <GradientStop Color="#FF333337" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image x:Name="empresaLogo" HorizontalAlignment="Left" Height="261" Margin="46,31,0,0" VerticalAlignment="Top" Width="416" Source="logo.png"/>
+        <Button x:Name="buttonPessoas" Content="Gerenciamento de Clientes" HorizontalAlignment="Left" Margin="150,327,0,0" VerticalAlignment="Top" Width="209" Height="77"/>
+        <Button x:Name="buttonProdutos" Content="Gerenciamento de estoque" HorizontalAlignment="Left" Margin="150,437,0,0" VerticalAlignment="Top" Width="209" Height="77"/>
+
+    </Grid>
+</Window>
