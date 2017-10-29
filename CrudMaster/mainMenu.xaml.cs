@@ -23,5 +23,20 @@ namespace CrudMaster
         {
             InitializeComponent();
         }
+
+        private void buttonPessoas_Click(object sender, RoutedEventArgs e)
+        {
+            clienteMain clienteWin = new CrudMaster.clienteMain();
+            clienteWin.Show();
+            MainMenu.Close();
+            
+        }
+
+        private void buttonProdutos_Click(object sender, RoutedEventArgs e)
+        {
+            produtoMain produtoWin = new CrudMaster.produtoMain();
+            MainMenu.Close();
+            produtoWin.Show();
+        }
     }
 }
