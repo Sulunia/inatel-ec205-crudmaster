@@ -59,6 +59,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="detalhesProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="funcionarioWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="mainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +81,12 @@
     </Compile>
     <Compile Include="clienteMain.xaml.cs">
       <DependentUpon>clienteMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="detalhesProduto.xaml.cs">
+      <DependentUpon>detalhesProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="funcionarioWindow.xaml.cs">
+      <DependentUpon>funcionarioWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="mainMenu.xaml.cs">
       <DependentUpon>mainMenu.xaml</DependentUpon>

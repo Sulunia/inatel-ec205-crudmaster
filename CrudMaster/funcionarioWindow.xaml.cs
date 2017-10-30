@@ -15,25 +15,13 @@ using System.Windows.Shapes;
 namespace CrudMaster
 {
     /// <summary>
-    /// Lógica interna para produtoMain.xaml
+    /// Lógica interna para funcionarioWindow.xaml
     /// </summary>
-    public partial class produtoMain : Window
+    public partial class funcionarioWindow : Window
     {
-        public produtoMain()
+        public funcionarioWindow()
         {
             InitializeComponent();
-        }
-
-        private void produtoWin_Closed(object sender, EventArgs e)
-        {
-            mainMenu menu = new CrudMaster.mainMenu();
-            menu.Show();
-        }
-
-        private void buttonCadastro_Click(object sender, RoutedEventArgs e)
-        {
-            detalhesProduto prod = new CrudMaster.detalhesProduto();
-            prod.Show();
         }
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="clienteMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" Closed="clienteWin_Closed">
     <Grid Margin="0,0,-1.208,-0.094" Background="#FF333333">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Background="#FF777777">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
