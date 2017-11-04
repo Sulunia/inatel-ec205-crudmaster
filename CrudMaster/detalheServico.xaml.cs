@@ -15,25 +15,18 @@ using System.Windows.Shapes;
 namespace CrudMaster
 {
     /// <summary>
-    /// Lógica interna para clienteMain.xaml
+    /// Lógica interna para detalheServico.xaml
     /// </summary>
-    public partial class clienteMain : Window
+    public partial class detalheServico : Window
     {
-        public clienteMain()
+        public detalheServico()
         {
             InitializeComponent();
         }
 
-        private void clienteWin_Closed(object sender, EventArgs e)
+        private void buttonCancela_Click(object sender, RoutedEventArgs e)
         {
-            mainMenu menu = new CrudMaster.mainMenu();
-            menu.Show();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            detalhesCliente clientWin = new CrudMaster.detalhesCliente();
-            clientWin.Show();
+            detalheServicos.Close();
         }
     }
 }
