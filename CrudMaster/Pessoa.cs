@@ -13,6 +13,7 @@ namespace CrudMaster
         private string endereço { get; set; }
         private string empresa { get; set; } = "---"; //E nesse caso ele ja vem com um valor padrão
         private string cpf { get; set; }
+        private List<Servico> servicos; 
 
         public Pessoa(string nome, int idade, string cpf, string endereço)
         {
@@ -21,6 +22,7 @@ namespace CrudMaster
             this.endereço = endereço;
             this.cpf = cpf;
             Console.WriteLine("Sem empresa!");
+            this.servicos = new List<Servico>();
         }
 
         public Pessoa(string nome, int idade, string cpf, string endereço, string empresa)
@@ -29,6 +31,7 @@ namespace CrudMaster
             this.idade = idade;
             this.endereço = endereço;
             this.empresa = empresa;
+            this.servicos = new List<Servico>();
         }
 
 
