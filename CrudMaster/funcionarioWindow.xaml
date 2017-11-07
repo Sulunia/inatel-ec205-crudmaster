@@ -32,7 +32,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,248,0,0" VerticalAlignment="Top" Width="246" Height="39" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
+        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF71E2EF" Offset="0"/>
@@ -43,7 +43,7 @@
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,292,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
+        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF71E2EF" Offset="0"/>
