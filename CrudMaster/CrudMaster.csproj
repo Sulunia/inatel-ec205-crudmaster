@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="DAO.cs" />
     <Compile Include="Funcionario.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Servico.cs" />
     <Page Include="clienteMain.xaml">
       <SubType>Designer</SubType>

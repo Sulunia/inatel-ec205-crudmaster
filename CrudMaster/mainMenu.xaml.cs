@@ -22,6 +22,7 @@ namespace CrudMaster
         public mainMenu()
         {
             InitializeComponent();
+            
         }
 
         private void buttonPessoas_Click(object sender, RoutedEventArgs e)

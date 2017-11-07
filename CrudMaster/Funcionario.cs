@@ -10,6 +10,13 @@ namespace CrudMaster
     {
         string nome { get; set; }
         string senha { get; set; } //Nunca jamais de forma alguma salve sua senha como string!
-        //Masssss... Dessa vez, só dessa vez!... A gente deixa passar.
+                                   //Masssss... Dessa vez, só dessa vez!... A gente deixa passar.
+
+        public Funcionario(string nome, string senha)
+        {
+            this.nome = nome;
+            this.senha = senha; //Meu deus, que horrível
+        }
     }
+
 }

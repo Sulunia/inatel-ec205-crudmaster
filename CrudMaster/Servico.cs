@@ -10,5 +10,11 @@ namespace CrudMaster
     {
         string descricao { get; set; }
         DateTime previsao { get; set; }
+
+        public Servico(string descricao, DateTime previsao)
+        {
+            this.descricao = descricao;
+            this.previsao = previsao;
+        }
     }
 }

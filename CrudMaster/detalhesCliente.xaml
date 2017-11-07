@@ -34,7 +34,7 @@
             </ListView.View>
         </ListView>
         <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="316,614,0,0" VerticalAlignment="Top" Width="132" Height="38" Background="#FFC3E7C1" Grid.ColumnSpan="2" Click="adicionaServico_Click"/>
-        <Button x:Name="salvarButton" Content="Salvar" HorizontalAlignment="Left" Margin="91,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Background="#FFC6FFAC"/>
+        <Button x:Name="salvarButton" Content="Salvar" HorizontalAlignment="Left" Margin="91,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Background="#FFC6FFAC" Click="salvarButton_Click"/>
         <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="133.906,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Background="#FFFFDBDB" Click="buttonCancelar_Click"/>
 
     </Grid>

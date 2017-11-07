@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,18 @@ namespace CrudMaster
         private void buttonCancelar_Click(object sender, RoutedEventArgs e)
         {
             detalheCliente.Close();
+        }
+
+        private void salvarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Int32.TryParse(telefoneBox.Text, out int val))
+            {
+                DAO.addPessoa(new Pessoa(nomeBox.Text, Int32.Parse(telefoneBox.Text), CPFBox.Text, enderecoBox.Text));
+            }
+            else
+            {
+                Debug.WriteLine("Failed to create new cliente!");
+            }
         }
     }
 }
