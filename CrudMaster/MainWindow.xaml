@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="MainWindow" Height="270" Width="270" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="251.445" Width="270" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="47*"/>
@@ -17,11 +17,41 @@
                 <GradientStop Color="#FF121149" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="usernameBox" Height="23" Margin="72.983,74,0,0" TextWrapping="Wrap" Width="120" FontFamily="Global User Interface" FontSize="14" ToolTip="nome de usuário" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="labelUser" Content="Nome de usuário" HorizontalAlignment="Left" Margin="8,74,0,0" FontFamily="Global User Interface" Foreground="#FFCDCDCD" Grid.ColumnSpan="2"/>
-        <Label x:Name="labelPass" Content="Senha" HorizontalAlignment="Left" Margin="19.983,120,0,6" FontFamily="NewsGoth Lt BT" Foreground="#FFCDCDCD" Grid.Column="1"/>
-        <Label x:Name="label" Content="Login" HorizontalAlignment="Left" Margin="42.983,20,0,0" Foreground="#FFCDCDCD" FontSize="22" FontFamily="NewsGoth Lt BT" FontStyle="Italic" Grid.Column="1"/>
-        <Button x:Name="buttonSubmit" Content="IR" HorizontalAlignment="Left" Margin="42.983,180,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="buttonSubmit_Click" Grid.Column="1"/>
-        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="72.983,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1"/>
+        <TextBox x:Name="usernameBox" Height="23" Margin="82,68,0,0" TextWrapping="Wrap" Width="120" FontFamily="Global User Interface" FontSize="14" ToolTip="nome de usuário" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="labelUser" Content="Nome de usuário" HorizontalAlignment="Left" Margin="10,68,0,6" FontFamily="NewsGoth Lt BT" Foreground="White" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="14">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="15"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="labelPass" Content="Senha" HorizontalAlignment="Left" Margin="26,116,0,10" FontFamily="NewsGoth Lt BT" Foreground="White" Grid.Column="1" FontWeight="Bold" FontSize="15">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="15"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Left" Margin="47,15,0,148" Foreground="White" FontSize="25" FontFamily="NewsGoth Lt BT" Grid.Column="1" Width="78" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <Button x:Name="buttonSubmit" Content="Entrar" HorizontalAlignment="Left" Margin="0,180,0,0" VerticalAlignment="Top" Width="264" Height="29" Click="buttonSubmit_Click" Grid.ColumnSpan="2" FontFamily="NewsGoth Lt BT" FontWeight="Bold" FontSize="20" Foreground="#FF121149" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.171"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.4"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF71E2EF" Offset="0"/>
+                    <GradientStop Color="#FF38C6D9" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="40"/>
+            </Button.Effect>
+        </Button>
+        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="82,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1"/>
     </Grid>
 </Window>

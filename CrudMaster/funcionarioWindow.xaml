@@ -59,7 +59,11 @@
                 <DropShadowEffect BlurRadius="50"/>
             </Image.Effect>
         </Image>
-        <Label x:Name="label" Content="Funcionários Cadastrados:" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="NewsGoth Lt BT" FontWeight="Bold"/>
+        <Label x:Name="label" Content="Funcionários Cadastrados:" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="NewsGoth Lt BT" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
 
     </Grid>
 </Window>
