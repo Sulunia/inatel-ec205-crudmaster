@@ -5,17 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="Microtec Gerenciador" Height="620" Width="512" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF333337">
+        Title="Microtec Gerenciador" Height="531" Width="512" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF333337">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF080851" Offset="0"/>
-                <GradientStop Color="#FF333337" Offset="1"/>
+                <GradientStop Color="#FF273B7A" Offset="0"/>
+                <GradientStop Color="#FF121149" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Image x:Name="empresaLogo" HorizontalAlignment="Left" Height="261" Margin="46,31,0,0" VerticalAlignment="Top" Width="416" Source="logo.png"/>
-        <Button x:Name="buttonPessoas" Content="Gerenciamento de Clientes" HorizontalAlignment="Left" Margin="150,327,0,0" VerticalAlignment="Top" Width="209" Height="77" Click="buttonPessoas_Click"/>
-        <Button x:Name="buttonProdutos" Content="Gerenciamento de estoque" HorizontalAlignment="Left" Margin="150,437,0,0" VerticalAlignment="Top" Width="209" Height="77" Click="buttonProdutos_Click"/>
+        <Image x:Name="empresaLogo" HorizontalAlignment="Center" Height="298" Margin="98,31,100,0" VerticalAlignment="Top" Width="308" Source="logo_new.png" >
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="46"/>
+            </Image.Effect>
+        </Image>
+        <Button x:Name="buttonPessoas" Content="Gerenciamento de Clientes" HorizontalAlignment="Left" Margin="0,358,0,0" VerticalAlignment="Top" Width="506" Height="46" Click="buttonPessoas_Click" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF71E2EF" Offset="0"/>
+                    <GradientStop Color="#FF38C6D9" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="40"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="buttonProdutos" Content="Gerenciamento de Estoque" HorizontalAlignment="Left" Margin="0,419,0,0" VerticalAlignment="Top" Width="506" Height="44" Click="buttonProdutos_Click" FontFamily="NewsGoth Lt BT" FontWeight="Bold" FontSize="16" BorderBrush="Black" Foreground="#FF121149">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF71E2EF" Offset="0"/>
+                    <GradientStop Color="#FF38C6D9" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="40"/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

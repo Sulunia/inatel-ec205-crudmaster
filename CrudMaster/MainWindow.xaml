@@ -6,12 +6,22 @@
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
         Title="MainWindow" Height="270" Width="270" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF333337" Margin="0,0,0,-21">
-        <TextBox x:Name="usernameBox" Height="23" Margin="120,74,0,0" TextWrapping="Wrap" Width="120" FontFamily="Global User Interface" FontSize="14" ToolTip="nome de usuário" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label x:Name="labelUser" Content="Nome de usuário" HorizontalAlignment="Left" Margin="8,74,0,0" FontFamily="Global User Interface" Foreground="#FFCDCDCD"/>
-        <Label x:Name="labelPass" Content="Senha" HorizontalAlignment="Left" Margin="67,120,0,6" FontFamily="Global User Interface" Foreground="#FFCDCDCD"/>
-        <Label x:Name="label" Content="Login" HorizontalAlignment="Left" Margin="102,20,0,0" Foreground="#FFCDCDCD" FontStyle="Italic" FontSize="18"/>
-        <Button x:Name="buttonSubmit" Content="IR" HorizontalAlignment="Left" Margin="90,180,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="buttonSubmit_Click"/>
-        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="120,120,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
+    <Grid Margin="0,0,0,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="217*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF273B7A" Offset="0"/>
+                <GradientStop Color="#FF121149" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="usernameBox" Height="23" Margin="72.983,74,0,0" TextWrapping="Wrap" Width="120" FontFamily="Global User Interface" FontSize="14" ToolTip="nome de usuário" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="labelUser" Content="Nome de usuário" HorizontalAlignment="Left" Margin="8,74,0,0" FontFamily="Global User Interface" Foreground="#FFCDCDCD" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelPass" Content="Senha" HorizontalAlignment="Left" Margin="19.983,120,0,6" FontFamily="NewsGoth Lt BT" Foreground="#FFCDCDCD" Grid.Column="1"/>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Left" Margin="42.983,20,0,0" Foreground="#FFCDCDCD" FontSize="22" FontFamily="NewsGoth Lt BT" FontStyle="Italic" Grid.Column="1"/>
+        <Button x:Name="buttonSubmit" Content="IR" HorizontalAlignment="Left" Margin="42.983,180,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="buttonSubmit_Click" Grid.Column="1"/>
+        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="72.983,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1"/>
     </Grid>
 </Window>
