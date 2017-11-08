@@ -24,12 +24,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastro" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="197,253,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Click="buttonCadastro_Click" Grid.Column="1" Background="#FFACACAC">
+        <Button x:Name="buttonCadastro" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="194,253,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Click="buttonCadastro_Click" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="197,302,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
+        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="194,302,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
@@ -44,7 +44,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="197,351,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
+        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="194,351,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
