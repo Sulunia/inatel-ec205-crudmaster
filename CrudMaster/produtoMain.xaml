@@ -7,48 +7,34 @@
         mc:Ignorable="d"
         Title="produtoMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" Closed="produtoWin_Closed" ResizeMode="CanMinimize">
     <Grid Margin="0,0,-1.208,-0.094">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="774*"/>
+            <ColumnDefinition Width="443*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF273B7A" Offset="0"/>
-                <GradientStop Color="#FF121149" Offset="1"/>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF272727"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961">
-            <ListView.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF121149" Offset="0"/>
-                    <GradientStop Color="#FF060536" Offset="1"/>
-                </LinearGradientBrush>
-            </ListView.Background>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Grid.ColumnSpan="2" Background="#FFACACAC" Foreground="Black" BorderBrush="Black">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastro" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="971,253,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Click="buttonCadastro_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF71E2EF" Offset="0"/>
-                    <GradientStop Color="#FF38C6D9" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button x:Name="buttonCadastro" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="197,253,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Click="buttonCadastro_Click" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="971,302,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF71E2EF" Offset="0"/>
-                    <GradientStop Color="#FF38C6D9" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="197,302,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="243" Margin="988,10,0,0" VerticalAlignment="Top" Width="219" Source="logo_new.png">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="243" Margin="214,10,0,0" VerticalAlignment="Top" Width="219" Source="logo_new.png" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect BlurRadius="50"/>
             </Image.Effect>
@@ -58,13 +44,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="971,351,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF71E2EF" Offset="0"/>
-                    <GradientStop Color="#FF38C6D9" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="197,351,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>

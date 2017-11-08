@@ -9,17 +9,11 @@
     <Grid Margin="0,0,-1.208,-0.094">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF273B7A" Offset="0"/>
-                <GradientStop Color="#FF121149" Offset="1"/>
+                <GradientStop Color="#FF272727" Offset="0"/>
+                <GradientStop Color="#FF131313" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961">
-            <ListView.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF121149" Offset="0"/>
-                    <GradientStop Color="#FF060536" Offset="1"/>
-                </LinearGradientBrush>
-            </ListView.Background>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Foreground="Black" Background="#FFACACAC">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -32,24 +26,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF71E2EF" Offset="0"/>
-                    <GradientStop Color="#FF38C6D9" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF121149" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF71E2EF" Offset="0"/>
-                    <GradientStop Color="#FF38C6D9" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>

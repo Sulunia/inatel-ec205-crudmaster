@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="Detalhes de serviço" Height="542.755" Width="773.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF333333" Margin="0,0,0,0.415">
+        Title="Detalhes de serviço" Height="540.755" Width="625.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,0.415">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF272727" Offset="0"/>
+                <GradientStop Color="#FF131313" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -14,14 +20,28 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="labelDescricao" Content="Descrição do serviço: " HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Foreground="#FFC2C2C2" FontSize="14"/>
-        <TextBox x:Name="boxDescricao" HorizontalAlignment="Left" Height="120" Margin="163,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="575" Text="The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog." Background="#FF212121" BorderBrush="White" Foreground="White" FontSize="14" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonSalvar" Content="Salvar" Margin="163,430,122,0" VerticalAlignment="Top" Height="46" Background="#FFD2FFD5"/>
-        <Button x:Name="buttonCancela" Content="Cancelar" Margin="121,430,164,0" VerticalAlignment="Top" Height="46" Background="#FFFFD8D8" Grid.Column="1" Click="buttonCancela_Click"/>
-        <Label x:Name="nomeServicoLabel" Content="Novo serviço para cliente (%s): " HorizontalAlignment="Left" Margin="20,9,0,0" VerticalAlignment="Top" Foreground="#FFDADADA" FontSize="24"/>
+        <Label x:Name="labelDescricao" Content="Descrição do serviço: " HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <TextBox x:Name="boxDescricao" HorizontalAlignment="Left" Height="123" Margin="163,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" Text="The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog." Background="#FF212121" BorderBrush="White" Foreground="White" FontSize="14" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSalvar" Content="Salvar" Margin="101,430,109,0" VerticalAlignment="Top" Height="46" Width="100" FontFamily="NewsGoth Lt BT" FontSize="14" BorderBrush="{x:Null}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD2FFD5" Offset="0"/>
+                    <GradientStop Color="#FF688D6B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonCancela" Content="Cancelar" Margin="109,430,101,0" VerticalAlignment="Top" Height="46" Grid.Column="1" Click="buttonCancela_Click" Width="100" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFD8D8" Offset="0"/>
+                    <GradientStop Color="#FF9C8080" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="nomeServicoLabel" Content="Novo serviço para cliente (%s): " HorizontalAlignment="Left" Margin="20,9,0,0" VerticalAlignment="Top" Foreground="#FFDADADA" FontSize="24" Grid.ColumnSpan="2" Height="47" Width="565"/>
         <Rectangle Fill="#FF737373" HorizontalAlignment="Left" Height="4" Margin="20,56,0,0" Stroke="#FF444444" VerticalAlignment="Top" Width="718" Grid.ColumnSpan="2"/>
-        <Calendar x:Name="servicoCalendar" HorizontalAlignment="Left" Margin="163,222,0,0" VerticalAlignment="Top" Height="163" Width="575" Grid.ColumnSpan="2"/>
-        <Label x:Name="labelData" Content="Data prevista de entrega do serviço: " HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Foreground="#FFC2C2C2" FontSize="14"/>
+        <Calendar x:Name="servicoCalendar" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Height="164" Width="199" Grid.Column="1"/>
+        <Label x:Name="labelData" Content="Data prevista de entrega do serviço: " HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
 
     </Grid>
 </Window>

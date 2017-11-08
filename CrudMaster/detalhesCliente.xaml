@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
         Title="Detalhes do Cliente" Height="803.547" Width="773.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF333333" Height="775" VerticalAlignment="Top">
+    <Grid Height="775" VerticalAlignment="Top">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF272727" Offset="0"/>
+                <GradientStop Color="#FF131313" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -14,28 +20,56 @@
             <ColumnDefinition Width="383*"/>
             <ColumnDefinition Width="385*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblbase" Content="Nome:" HorizontalAlignment="Left" Margin="51,20,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7"/>
-        <Label x:Name="lblbase_Copy" Content="CPF: " HorizontalAlignment="Left" Margin="60,58,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7"/>
-        <Label x:Name="lblbase_Copy1" Content="Endereço:" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7"/>
-        <Label x:Name="lblbase_Copy2" Content="e-Mail: " HorizontalAlignment="Left" Margin="47,141,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7"/>
-        <Label x:Name="lblbase_Copy3" Content="Telefone:" HorizontalAlignment="Left" Margin="40,184,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7"/>
-        <TextBox x:Name="nomeBox" HorizontalAlignment="Left" Height="20" Margin="102,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="CPFBox" HorizontalAlignment="Left" Height="20" Margin="102,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="enderecoBox" HorizontalAlignment="Left" Height="20" Margin="102,102,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="20" Margin="102,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="telefoneBox" HorizontalAlignment="Left" Height="20" Margin="102,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <Rectangle Fill="#FF333333" HorizontalAlignment="Left" Height="444" Margin="25,231,0,0" Stroke="#FF444444" VerticalAlignment="Top" Width="713" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblbase" Content="Nome:" HorizontalAlignment="Left" Margin="51,20,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7" FontFamily="NewsGoth Lt BT"/>
+        <Label x:Name="lblbase_Copy" Content="CPF: " HorizontalAlignment="Left" Margin="60,58,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7" FontFamily="NewsGoth Lt BT"/>
+        <Label x:Name="lblbase_Copy1" Content="Endereço:" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7" FontFamily="NewsGoth Lt BT"/>
+        <Label x:Name="lblbase_Copy2" Content="e-Mail: " HorizontalAlignment="Left" Margin="47,141,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7" FontFamily="NewsGoth Lt BT"/>
+        <Label x:Name="lblbase_Copy3" Content="Telefone:" HorizontalAlignment="Left" Margin="40,184,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FFC7C7C7" FontFamily="NewsGoth Lt BT"/>
+        <TextBox x:Name="nomeBox" HorizontalAlignment="Left" Height="20" Margin="102,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="CPFBox" HorizontalAlignment="Left" Height="20" Margin="102,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="enderecoBox" HorizontalAlignment="Left" Height="20" Margin="102,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="20" Margin="102,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="telefoneBox" HorizontalAlignment="Left" Height="20" Margin="102,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="444" Margin="25,231,0,0" VerticalAlignment="Top" Width="713" Grid.ColumnSpan="2" Stroke="Black">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF272727" Offset="1"/>
+                    <GradientStop Color="#FF3E3E3E" Offset="0.01"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Label x:Name="lbl1" Content="Serviços: " HorizontalAlignment="Left" Margin="25,231,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" Width="57"/>
-        <ListView x:Name="servicoesView" HorizontalAlignment="Left" Height="332" Margin="40,255,0,0" VerticalAlignment="Top" Width="684" Grid.ColumnSpan="2" Background="#FF3D3D3D">
+        <ListView x:Name="servicoesView" HorizontalAlignment="Left" Height="332" Margin="40,255,0,0" VerticalAlignment="Top" Width="684" Grid.ColumnSpan="2" Background="#FFACACAC">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="316,614,0,0" VerticalAlignment="Top" Width="132" Height="38" Background="#FFC3E7C1" Grid.ColumnSpan="2" Click="adicionaServico_Click"/>
-        <Button x:Name="salvarButton" Content="Salvar" HorizontalAlignment="Left" Margin="91,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Background="#FFC6FFAC" Click="salvarButton_Click"/>
-        <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="133.906,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Background="#FFFFDBDB" Click="buttonCancelar_Click"/>
+        <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="316,614,0,0" VerticalAlignment="Top" Width="132" Height="38" Grid.ColumnSpan="2" Click="adicionaServico_Click" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB7EEB4" Offset="0"/>
+                    <GradientStop Color="#FF5B765A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="salvarButton" Content="Salvar" HorizontalAlignment="Left" Margin="91,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Click="salvarButton_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA1FF9C" Offset="0"/>
+                    <GradientStop Color="#FF447642" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="133.906,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Click="buttonCancelar_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFD8D8" Offset="0"/>
+                    <GradientStop Color="#FF9C8080" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
