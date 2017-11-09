@@ -17,7 +17,7 @@
                 <GradientStop Color="#FF131313" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="usernameBox" Height="23" Margin="82,68,0,0" TextWrapping="Wrap" Width="120" FontFamily="Global User Interface" FontSize="14" ToolTip="nome de usuário" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="usernameBox" Height="23" Margin="82,68,0,0" TextWrapping="Wrap" Width="120" FontFamily="Global User Interface" FontSize="14" ToolTip="nome de usuário" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Background="#FF1F1F1F" Foreground="White"/>
         <Label x:Name="labelUser" Content="Nome de usuário" HorizontalAlignment="Left" Margin="10,68,0,6" FontFamily="NewsGoth Lt BT" Foreground="White" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="14">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="15"/>
@@ -46,6 +46,6 @@
                 <DropShadowEffect BlurRadius="40"/>
             </Button.Effect>
         </Button>
-        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="82,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1"/>
+        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="82,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1" Background="#FF1F1F1F" Foreground="White"/>
     </Grid>
 </Window>
