@@ -25,10 +25,10 @@
         <Label x:Name="labelQtd" Content="Quantidade: " HorizontalAlignment="Left" Margin="78,66,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="29" FontFamily="NewsGoth Lt BT" Grid.ColumnSpan="2"/>
         <Label x:Name="labelPreco" Content="Preço (R$): " HorizontalAlignment="Left" Margin="82,117,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontFamily="NewsGoth Lt BT" Grid.ColumnSpan="2"/>
         <Label x:Name="labelFabr" Content="Fabricante: " HorizontalAlignment="Left" Margin="84,165,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontFamily="NewsGoth Lt BT" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="boxNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560"/>
-        <TextBox x:Name="boxPreco" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560"/>
-        <TextBox x:Name="boxFabr" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560"/>
-        <ComboBox x:Name="comboNum" Grid.Column="1" HorizontalAlignment="Left" Margin="9.943,73,0,0" VerticalAlignment="Top" Width="69" IsEditable="True">
+        <TextBox x:Name="boxNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Background="#FF1F1F1F" Foreground="White"/>
+        <TextBox x:Name="boxPreco" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Background="#FF1F1F1F" Foreground="White"/>
+        <TextBox x:Name="boxFabr" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Foreground="White" Background="#FF1F1F1F"/>
+        <ComboBox x:Name="comboNum" Grid.Column="1" HorizontalAlignment="Left" Margin="9.943,73,0,0" VerticalAlignment="Top" Width="69" IsEditable="True" Background="#FF1F1F1F">
         </ComboBox>
         <Button x:Name="buttonSalvar" Content="Salvar" Grid.Column="1" HorizontalAlignment="Left" Margin="72.943,16.264,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="28" BorderBrush="{x:Null}">
             <Button.Background>
