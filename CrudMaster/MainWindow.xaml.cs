@@ -23,6 +23,7 @@ namespace CrudMaster
         public MainWindow()
         {
             InitializeComponent();
+            DAO.initialize();
         }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
