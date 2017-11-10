@@ -20,12 +20,15 @@ namespace CrudMaster
     /// </summary>
     public partial class detalhesCliente : Window
     {
-        private List<Servico> servicos = new List<Servico>();
+        public List<Servico> servicos { get; set; }
         private clienteMain w;
+        private Pessoa pessoa;
+        private bool flag = false;
         private int index { get; set; } = -1;
         public detalhesCliente(clienteMain w)
         {
             this.w = w;
+            servicos = new List<Servico>();
             InitializeComponent();
             this.servicos.Clear();
         }
@@ -33,6 +36,7 @@ namespace CrudMaster
         public detalhesCliente(clienteMain w, Pessoa p, int index)
         {
             this.w = w;
+            servicos = new List<Servico>();
             InitializeComponent();
             this.servicos.Clear();
 
@@ -43,20 +47,71 @@ namespace CrudMaster
             emailBox.Text = p.email;
             servicos = p.servicos;
             this.index = index;
+
+            listarServicos(p, "");
+            pessoa = p;
         }
 
-        public void addServicoToCliente(string S)
+        public void listarServicos(Pessoa p, string f)
+        {
+            
+            servicosView.SelectionMode = SelectionMode.Single;
+
+            if (flag == false)
+            {
+                servicosView.Items.Clear();
+                var clienteFile = new System.IO.StreamReader(DAO.path + @"\Clientes.txt");
+                List<Servico> servicosRead = new List<Servico>();
+                while ((clienteFile.BaseStream.Length != 0) && !clienteFile.EndOfStream)
+                {
+                    //Nome:Endereço:Telefone:CPF:Email%Descricao1:10/11/2017#Descricao2:10/11/2017
+                    var line = clienteFile.ReadLine();
+
+                    if (line.Length > 3)
+                    {
+                        var splitPessoaServico = line.Split('%');
+                        var pessoaSubs = splitPessoaServico[0].Split(':');
+                        if ((splitPessoaServico.Length == 2) && String.Equals(p.nome, pessoaSubs[0]))
+                        {
+                            var servicosSubs = splitPessoaServico[1].Split('#');
+                            foreach (string s in servicosSubs)
+                            {
+                                var newservico = new Servico(s);
+                                servicosRead.Add(newservico);
+                            }
+                        }
+                    }
+                }
+                servicos = servicosRead;
+                clienteFile.Close();
+
+
+                foreach (Servico e in servicos)
+                {
+                    var row = new { Descricao = e.descricao, Data = e.previsao.ToShortDateString() };
+                    servicosView.Items.Add(row);
+                }
+                flag = true;
+            }
+            else
+            {
+                Servico newServ = new Servico(f);
+                var row = new { Descricao = newServ.descricao, Data = newServ.previsao.ToShortDateString() };
+                servicosView.Items.Add(row);
+            }
+        }
+
+        public void addServicoToCliente(string s)
         {
             //Por algum motivo obscuro, o C# não me permite mandar o servico direto.
             //Então converto ele pra string...e de volta.
-            Debug.WriteLine(S);
-            Servico serv = new Servico(S);
+            Servico serv = new Servico(s);
             servicos.Add(serv);
         }
 
         private void adicionaServico_Click(object sender, RoutedEventArgs e)
         {
-            detalheServico detalhe = new CrudMaster.detalheServico(this);
+            detalheServico detalhe = new CrudMaster.detalheServico(this, pessoa);
             detalhe.Show();
         }
 

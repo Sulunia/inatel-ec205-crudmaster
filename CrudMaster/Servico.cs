@@ -9,8 +9,8 @@ namespace CrudMaster
 {
     public class Servico
     {
-        string descricao { get; set; }
-        DateTime previsao { get; set; }
+        public string descricao { get; set; }
+        public DateTime previsao { get; set; }
 
         public Servico(string descricao, DateTime previsao)
         {

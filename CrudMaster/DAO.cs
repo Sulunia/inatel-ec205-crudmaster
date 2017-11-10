@@ -18,7 +18,7 @@ namespace CrudMaster
         public static StreamReader clienteFile;
         public static StreamReader produtoFile;
 
-        private static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
+        public static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
 
         public static void addCliente(Pessoa p)
         {
@@ -109,6 +109,7 @@ namespace CrudMaster
             pessoaLista.ElementAt(index).cpf = p.cpf;
             pessoaLista.ElementAt(index).email = p.email;
             pessoaLista.ElementAt(index).telefone = p.telefone;
+            pessoaLista.ElementAt(index).servicos = p.servicos;
 
             string text = File.ReadAllText(path + @"\Clientes.txt");
             var textSplit = text.Split('\n');

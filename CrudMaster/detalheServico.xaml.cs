@@ -20,12 +20,14 @@ namespace CrudMaster
     public partial class detalheServico : Window
     {
         private detalhesCliente janelaAnterior;
+        private Pessoa pessoa;
 
-        public detalheServico(detalhesCliente w)
+        public detalheServico(detalhesCliente w, Pessoa p)
         {
             InitializeComponent();
             servicoCalendar.SelectedDate = DateTime.Now;
             janelaAnterior = w;
+            pessoa = p;
         }
 
         private void buttonCancela_Click(object sender, RoutedEventArgs e)
@@ -37,6 +39,7 @@ namespace CrudMaster
         {
             Servico serv = new Servico(boxDescricao.Text, Convert.ToDateTime(servicoCalendar.SelectedDate));
             janelaAnterior.addServicoToCliente(serv.ToString());
+            janelaAnterior.listarServicos(pessoa, serv.ToString());
             this.Close();
         }
     }

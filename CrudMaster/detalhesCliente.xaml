@@ -39,10 +39,11 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label x:Name="lbl1" Content="Serviços: " HorizontalAlignment="Left" Margin="25,231,0,0" VerticalAlignment="Top" Foreground="#FFCCCCCC" Width="57"/>
-        <ListView x:Name="servicoesView" HorizontalAlignment="Left" Height="332" Margin="40,255,0,0" VerticalAlignment="Top" Width="684" Grid.ColumnSpan="2" Background="#FFACACAC">
+        <ListView x:Name="servicosView" HorizontalAlignment="Left" Height="332" Margin="40,255,0,0" VerticalAlignment="Top" Width="684" Grid.ColumnSpan="2" Background="#FFACACAC">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Descrição" Width="500" DisplayMemberBinding="{Binding Path=Descricao}" />
+                    <GridViewColumn Header="Data prevista para entrega" Width="180" DisplayMemberBinding="{Binding Path=Data}" />
                 </GridView>
             </ListView.View>
         </ListView>
