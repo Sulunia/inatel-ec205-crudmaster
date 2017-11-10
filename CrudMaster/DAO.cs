@@ -18,16 +18,21 @@ namespace CrudMaster
         public static StreamReader clienteFile;
         public static StreamReader produtoFile;
 
+        private static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
+
         public static void addCliente(Pessoa p)
         {
             pessoaLista.Add(p);
             Debug.WriteLine("[DAO] Added new Pessoa to list.");
             Debug.WriteLine("[DAO] Info: " + p.ToString());
+            File.AppendAllText((path + @"\Clientes.txt"), p.ToString()+ '\r' + '\n');
+            Debug.WriteLine("[DAO] Appended new Pessoa to persistent file.");
         }
 
         public static void initialize()
         {
-            var path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
+            string line;
+
             Debug.WriteLine("[DAO] Preparing to read file: " + path + @"\Clientes.txt!");
             if (File.Exists(path+ @"\Clientes.txt") == false)
             {
@@ -49,6 +54,29 @@ namespace CrudMaster
                 Debug.WriteLine("[DAO] File exists, loading from disk...");
             }
             clienteFile = new System.IO.StreamReader(path + @"\Clientes.txt");
+            while((clienteFile.BaseStream.Length != 0) && !clienteFile.EndOfStream)
+            {
+                //Nome:Endereço:Telefone:CPF:Email%Descricao1:10/11/2017#Descricao2:10/11/2017
+                List<Servico> servicosRead = new List<Servico>();
+                line = clienteFile.ReadLine();
+                if (line.Length > 3)
+                {
+                    var splitPessoaServico = line.Split('%');
+                    var pessoaSubs = splitPessoaServico[0].Split(':');
+                    if (splitPessoaServico.Length == 2)
+                    {
+                        var servicosSubs = splitPessoaServico[1].Split('#');
+                        foreach (string s in servicosSubs)
+                        {
+                            var newservico = new Servico(s);
+                            servicosRead.Add(newservico);
+                        }
+                    }
+                    Pessoa p = new Pessoa(pessoaSubs[0], pessoaSubs[2], pessoaSubs[3], pessoaSubs[1], pessoaSubs[4], servicosRead);
+                    pessoaLista.Add(p);
+                }
+            }
+            clienteFile.Close();
 
             Debug.WriteLine("[DAO] Preparing to read file: " + path + @"\Produtos.txt!");
             if (File.Exists(path + @"\Produtos.txt") == false)
@@ -71,6 +99,7 @@ namespace CrudMaster
                 Debug.WriteLine("[DAO] File exists, loading from disk...");
             }
             produtoFile = new System.IO.StreamReader(path + @"\Produtos.txt");
+            produtoFile.Close();
         }
 
         public static void replacePessoa(Pessoa p, int index)
@@ -80,6 +109,16 @@ namespace CrudMaster
             pessoaLista.ElementAt(index).cpf = p.cpf;
             pessoaLista.ElementAt(index).email = p.email;
             pessoaLista.ElementAt(index).telefone = p.telefone;
+
+            string text = File.ReadAllText(path + @"\Clientes.txt");
+            var textSplit = text.Split('\n');
+            textSplit[index] = pessoaLista.ElementAt(index).ToString() + '\r';
+            text = "";
+            foreach (string t in textSplit)
+            {
+                text = text + t + '\n';
+            }
+            File.WriteAllText(path + @"\Clientes.txt", text);
         }
     }
 }

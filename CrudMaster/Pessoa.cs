@@ -27,7 +27,12 @@ namespace CrudMaster
 
         public override string ToString()
         {
-            string result = this.nome + ":" + this.endereço + ":" + this.telefone + ":" + this.cpf + ":" + this.email;
+            string result = this.nome + ":" + this.endereço + ":" + this.telefone + ":" + this.cpf + ":" + this.email+"%";
+            foreach (Servico s in this.servicos)
+            {
+                result = result +s.ToString()+"#";
+            }
+            result = result.Remove((result.Length - 1));
             return result;
         }
 

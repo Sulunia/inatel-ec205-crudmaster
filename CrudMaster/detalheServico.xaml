@@ -38,9 +38,18 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="nomeServicoLabel" Content="Novo serviço para cliente (%s): " HorizontalAlignment="Left" Margin="20,9,0,0" VerticalAlignment="Top" Foreground="#FFDADADA" FontSize="24" Grid.ColumnSpan="2" Height="47" Width="565"/>
+        <Label x:Name="nomeServicoLabel" Content="Novo serviço " HorizontalAlignment="Left" Margin="20,9,0,0" VerticalAlignment="Top" Foreground="#FFDADADA" FontSize="24" Grid.ColumnSpan="2" Height="47" Width="565"/>
         <Rectangle Fill="#FF737373" HorizontalAlignment="Left" Height="4" Margin="20,56,0,0" Stroke="#FF444444" VerticalAlignment="Top" Width="718" Grid.ColumnSpan="2"/>
-        <Calendar x:Name="servicoCalendar" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Height="164" Width="199" Grid.Column="1"/>
+        <Calendar x:Name="servicoCalendar" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Height="164" Width="199" Grid.Column="1">
+            <Calendar.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB9B9B9" Offset="0"/>
+                    <GradientStop Color="#FFECF0F4" Offset="0.16"/>
+                    <GradientStop Color="Black" Offset="0.16"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Calendar.Background>
+        </Calendar>
         <Label x:Name="labelData" Content="Data prevista de entrega do serviço: " HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
 
     </Grid>
