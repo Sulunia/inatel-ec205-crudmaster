@@ -19,14 +19,25 @@ namespace CrudMaster
     /// </summary>
     public partial class detalheServico : Window
     {
-        public detalheServico()
+        private detalhesCliente janelaAnterior;
+
+        public detalheServico(detalhesCliente w)
         {
             InitializeComponent();
+            servicoCalendar.SelectedDate = DateTime.Now;
+            janelaAnterior = w;
         }
 
         private void buttonCancela_Click(object sender, RoutedEventArgs e)
         {
             detalheServicos.Close();
+        }
+
+        private void buttonSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            Servico serv = new Servico(boxDescricao.Text, Convert.ToDateTime(servicoCalendar.SelectedDate));
+            janelaAnterior.addServicoToCliente(serv.ToString());
+            this.Close();
         }
     }
 }

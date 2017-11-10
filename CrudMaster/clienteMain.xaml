@@ -16,7 +16,8 @@
         <ListView x:Name="listaClientes" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Foreground="Black" Background="#FFACACAC" BorderBrush="Black">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Nome" Width="300" DisplayMemberBinding="{Binding Path=Nome}" />
+                    <GridViewColumn Header="Telefone" Width="350" DisplayMemberBinding="{Binding Path=Telefone}"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -25,7 +26,7 @@
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="button1" Content="Editar Cliente" HorizontalAlignment="Left" Margin="962,277,0,0" VerticalAlignment="Top" Width="253" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC">
+        <Button x:Name="button1" Content="Editar Cliente" HorizontalAlignment="Left" Margin="962,277,0,0" VerticalAlignment="Top" Width="253" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button1_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>

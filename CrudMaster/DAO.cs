@@ -18,10 +18,11 @@ namespace CrudMaster
         public static StreamReader clienteFile;
         public static StreamReader produtoFile;
 
-        public static void addPessoa(Pessoa p)
+        public static void addCliente(Pessoa p)
         {
             pessoaLista.Add(p);
             Debug.WriteLine("[DAO] Added new Pessoa to list.");
+            Debug.WriteLine("[DAO] Info: " + p.ToString());
         }
 
         public static void initialize()
@@ -72,5 +73,13 @@ namespace CrudMaster
             produtoFile = new System.IO.StreamReader(path + @"\Produtos.txt");
         }
 
+        public static void replacePessoa(Pessoa p, int index)
+        {
+            pessoaLista.ElementAt(index).nome = p.nome;
+            pessoaLista.ElementAt(index).endereço = p.endereço;
+            pessoaLista.ElementAt(index).cpf = p.cpf;
+            pessoaLista.ElementAt(index).email = p.email;
+            pessoaLista.ElementAt(index).telefone = p.telefone;
+        }
     }
 }
