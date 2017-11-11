@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="Detalhes do Cliente" Height="803.547" Width="773.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Height="775" VerticalAlignment="Top">
+        Title="Detalhes do Cliente" Height="739.245" Width="773.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Height="713" VerticalAlignment="Top" Margin="0,0,0,-2.057">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF272727" Offset="0"/>
@@ -30,7 +30,7 @@
         <TextBox x:Name="enderecoBox" HorizontalAlignment="Left" Height="20" Margin="102,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
         <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="20" Margin="102,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
         <TextBox x:Name="telefoneBox" HorizontalAlignment="Left" Height="20" Margin="102,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636" FontSize="12" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <Rectangle HorizontalAlignment="Left" Height="444" Margin="25,231,0,0" VerticalAlignment="Top" Width="713" Grid.ColumnSpan="2" Stroke="Black">
+        <Rectangle HorizontalAlignment="Left" Height="410" Margin="25,231,0,0" VerticalAlignment="Top" Width="713" Grid.ColumnSpan="2" Stroke="Black">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF272727" Offset="1"/>
@@ -47,7 +47,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="316,614,0,0" VerticalAlignment="Top" Width="132" Height="38" Grid.ColumnSpan="2" Click="adicionaServico_Click" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
+        <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="317,592,0,0" VerticalAlignment="Top" Width="132" Height="38" Grid.ColumnSpan="2" Click="adicionaServico_Click" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFB7EEB4" Offset="0"/>
@@ -55,7 +55,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="salvarButton" Content="Salvar" HorizontalAlignment="Left" Margin="91,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Click="salvarButton_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
+        <Button x:Name="salvarButton" Content="Salvar" Margin="102,658,120.094,0" VerticalAlignment="Top" Height="42" Click="salvarButton_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFA1FF9C" Offset="0"/>
@@ -63,7 +63,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="133.906,706,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Click="buttonCancelar_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
+        <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="120.906,658,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Click="buttonCancelar_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFD8D8" Offset="0"/>

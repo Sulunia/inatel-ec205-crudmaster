@@ -31,6 +31,7 @@ namespace CrudMaster
             servicos = new List<Servico>();
             InitializeComponent();
             this.servicos.Clear();
+            flag = true;
         }
 
         public detalhesCliente(clienteMain w, Pessoa p, int index)
