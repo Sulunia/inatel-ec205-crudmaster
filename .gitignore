@@ -205,7 +205,11 @@ $RECYCLE.BIN/
 *.txt
 *.txt
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 *.txt
 >>>>>>> produtos
+=======
+>>>>>>> backendDev
+*.txt
 *.txt

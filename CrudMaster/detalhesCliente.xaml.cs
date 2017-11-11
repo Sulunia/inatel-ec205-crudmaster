@@ -119,6 +119,7 @@ namespace CrudMaster
         {
             if (index != -1)
             {
+<<<<<<< HEAD
                 DAO.edita_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
                 MessageBox.Show("Cadastro alterado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 detalheCliente.servicos.Clear();
@@ -131,7 +132,67 @@ namespace CrudMaster
                 detalheCliente.servicos.Clear();
                 detalheCliente.Close();
                 w.listar_clientes();
+=======
+                if (checaPalavra(nomeBox.Text, false) == false || checaNum(telefoneBox.Text) == false || checaPalavra(emailBox.Text, true) == false || checaNum(CPFBox.Text) == false || checaPalavra(enderecoBox.Text, true) == false)
+                    MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                else
+                {
+                    DAO.replacePessoa(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
+                    MessageBox.Show("Cadastro alterado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    detalheCliente.servicos.Clear();
+                    detalheCliente.Close();
+                    w.listarClientes();
+                }                
             }
+            else {
+                if(checaPalavra(nomeBox.Text, false) == false || checaNum(telefoneBox.Text) == false || checaPalavra(emailBox.Text, true) == false || checaNum(CPFBox.Text) == false || checaPalavra(enderecoBox.Text, true) == false)
+                    MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                else
+                {
+                    DAO.addCliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    detalheCliente.servicos.Clear();
+                    detalheCliente.Close();
+                    w.listarClientes();
+                }                
+            }
+        }
+
+        private bool checaNum(string sVal)
+        {
+            int value;
+
+            foreach (char c in sVal)
+            {
+                value = Convert.ToInt32(c);
+                Console.WriteLine(value);
+                if ((value > 57) || (value < 48))
+                    return false;                
+            }
+            return true;
+        }
+
+        private bool checaPalavra(string checa, bool aux)
+        {
+            int value;
+            foreach (char c in checa)
+            {
+                if(aux == false)
+                {
+                    value = Convert.ToInt32(c);
+                    if ((value < 65) || (value > 90))
+                        if ((value < 97) || (value > 122))
+                            return false;
+                }
+                else
+                {
+                    value = Convert.ToInt32(c);
+                    if(value == 35 || value == 37 || value == 58)
+                        return false;
+                }
+>>>>>>> backendDev
+            }
+            return true;
         }
     }
 }

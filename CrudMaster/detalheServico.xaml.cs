@@ -40,10 +40,35 @@ namespace CrudMaster
 
         private void cadastrar_servico(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             Servico serv = new Servico(boxDescricao.Text, Convert.ToDateTime(servicoCalendar.SelectedDate));
             janelaAnterior.adicionar_servico_arquivo(serv.ToString());
             janelaAnterior.listaServico(pessoa, serv.ToString());
             this.Close();
+=======
+            if(checaPalavra(boxDescricao.Text) == false)
+                MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+            {
+                Servico serv = new Servico(boxDescricao.Text, Convert.ToDateTime(servicoCalendar.SelectedDate));
+                janelaAnterior.addServicoToCliente(serv.ToString());
+                janelaAnterior.listarServicos(pessoa, serv.ToString());
+                this.Close();
+            }            
+        }
+
+        private bool checaPalavra(string checa)
+        {
+            int value;
+            foreach (char c in checa)
+            {
+                value = Convert.ToInt32(c);
+                if (value == 35 || value == 37 || value == 58)
+                    return false;
+            
+            }
+            return true;
+>>>>>>> backendDev
         }
     }
 }
