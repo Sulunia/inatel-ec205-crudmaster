@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CrudMaster
 {
-    class Produto
+    public class Produto
     {
-        string nome { get; set; }
-        int quantidade { get; set; }
-        string preco { get; set; }
-        string fabricante { get; set; }
+        public string nome { get; set; }
+        public int quantidade { get; set; }
+        public string preco { get; set; }
+        public string fabricante { get; set; }
 
         public Produto(string nome, int quantidade, string preco, string fabricante)
         {
@@ -19,6 +19,10 @@ namespace CrudMaster
             this.quantidade = quantidade;
             this.preco = preco;
             this.fabricante = fabricante;
+        }
+        public string aux()
+        {
+            return $"{nome}/{quantidade}/{preco}/{fabricante}";
         }
     }
 }

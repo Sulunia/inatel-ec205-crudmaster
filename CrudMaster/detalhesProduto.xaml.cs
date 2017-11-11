@@ -19,11 +19,18 @@ namespace CrudMaster
     /// </summary>
     public partial class detalhesProduto : Window
     {
-        private List<int> numbers; 
+        private List<int> numbers;
+        private Produto prod;
+        private Produto antigo;
+        private Produto novo;
+        private produtoMain pM;
+        private bool edit;
 
-        public detalhesProduto()
+
+        public detalhesProduto(produtoMain pM)
         {
             InitializeComponent();
+            this.pM = pM;
 
             //Adiciona números a lista de combo box
             numbers = new List<int>();
@@ -34,9 +41,43 @@ namespace CrudMaster
             comboNum.ItemsSource = numbers;
         }
 
+        public detalhesProduto(produtoMain pM, Produto prod, bool edit)
+        {
+            InitializeComponent();
+            this.antigo = prod;
+            this.pM = pM;
+            this.edit = edit;
+            boxNome.Text = prod.nome;
+            comboNum.Text = prod.quantidade.ToString();
+            boxPreco.Text = prod.preco;
+            boxFabr.Text = prod.fabricante;
+
+        }
+
         private void buttonCancela_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            if(edit == true)
+            {
+                novo = new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text);
+                DAO.editaProduto(antigo, novo);
+
+                MessageBox.Show("Edição realizada com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);                
+                this.Close();
+                DAO.exibeProdutos(pM);
+
+            }
+            else
+            {
+                DAO.addProduto(new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text));
+                MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Close();
+                DAO.exibeProdutos(pM);
+            }
         }
     }
 }

@@ -17,9 +17,13 @@
                 <GradientStop Color="#FF272727"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Grid.ColumnSpan="2" Background="#FFACACAC" Foreground="Black" BorderBrush="Black">
+        <ListView x:Name="listaProduto" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Grid.ColumnSpan="2" Background="#FFACACAC" Foreground="Black" BorderBrush="Black">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Nome" Width="250" DisplayMemberBinding="{Binding Path=Nome}" />
+                    <GridViewColumn Header="Quantidade" Width="150" DisplayMemberBinding="{Binding Path=Quantidade}"/>
+                    <GridViewColumn Header="Preço" Width="200" DisplayMemberBinding="{Binding Path=Preço}" />
+                    <GridViewColumn Header="Fabricante" Width="370" DisplayMemberBinding="{Binding Path=Fabricante}"/>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
@@ -29,7 +33,7 @@
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="194,302,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
+        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="194,302,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC" Click="buttonEdita_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
@@ -44,7 +48,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="194,351,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC">
+        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="194,351,0,0" VerticalAlignment="Top" Width="249" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC" Click="buttonExclui_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
