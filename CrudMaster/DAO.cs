@@ -17,7 +17,8 @@ namespace CrudMaster
 
         public static StreamReader clienteFile;
         public static StreamReader produtoFile;
-        
+        public static StreamReader funcionarioFile;
+
         public static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
 
         public static void addCliente(Pessoa p)
@@ -143,6 +144,42 @@ namespace CrudMaster
             }
             produtoFile = new System.IO.StreamReader(path + @"\Produtos.txt");
             produtoFile.Close();
+
+            //Funcionario
+            Debug.WriteLine("[DAO] Preparing to read file: " + path + @"\Funcionarios.txt!");
+            if (File.Exists(path + @"\Funcionarios.txt") == false)
+            {
+                try
+                {
+                    //Cria o arquivo no primeiro run
+                    Debug.WriteLine("[DAO] Generating new txt file...");
+                    File.WriteAllText(path + @"\Funcionarios.txt", "");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Could not create file handler! Try running as administrator!\n" +
+                        "Exception: " + e.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                Debug.WriteLine("[DAO] File exists, loading from disk...");
+            }
+            funcionarioFile = new System.IO.StreamReader(path + @"\Funcionarios.txt");
+            while ((funcionarioFile.BaseStream.Length != 0) && !funcionarioFile.EndOfStream)
+            {
+                //nome:senha:username
+                List<Servico> servicosRead = new List<Servico>();
+                line = funcionarioFile.ReadLine();
+                if (line.Length > 3)
+                {
+                    var split = line.Split(':');
+                    var s = new Funcionario(split[0], split[1], split[2]);
+                    funcionarioLista.Add(s);
+                }
+            }
+            funcionarioFile.Close();
         }
 
         public static void replacePessoa(Pessoa p, int index)
@@ -163,6 +200,34 @@ namespace CrudMaster
                 text = text + t + '\n';
             }
             File.WriteAllText(path + @"\Clientes.txt", text);
+        }
+
+        public static void addFuncionario(Funcionario p)
+        {
+            funcionarioLista.Add(p);
+            File.AppendAllText((path + @"\Funcionarios.txt"), p.ToString() + '\r' + '\n');
+            Debug.WriteLine("[DAO] Wrote '" + p.ToString() + "' to the file.");
+        }
+
+        public static void removeFuncionario(Funcionario removido)
+        {
+            //Remove funcionario da lista de funcionarios
+            foreach (Funcionario item in funcionarioLista)
+            {
+                if (String.Equals(removido.nome, item.nome))
+                {
+                    funcionarioLista.Remove(item);
+                    break;
+                }
+            }
+
+            //Grava a lista inteira no arquivo denovo
+            string result = "";
+            foreach (Funcionario item in funcionarioLista)
+            {
+                result = result + item.ToString() + '\r' + '\n';
+            }
+            File.WriteAllText((path + @"\Funcionarios.txt"), result);
         }
     }
 }

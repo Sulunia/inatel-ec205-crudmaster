@@ -13,10 +13,11 @@ namespace CrudMaster
                                           //Masssss... Dessa vez, só dessa vez!... A gente deixa passar.
         public string username { get; set; }
 
-        public Funcionario(string nome, string senha)
+        public Funcionario(string nome, string senha, string username)
         {
             this.nome = nome;
             this.senha = senha; //Meu deus, que horrível
+            this.username = username;
         }
 
         public Funcionario()

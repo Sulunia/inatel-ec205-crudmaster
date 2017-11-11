@@ -34,7 +34,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonCancela" Content="Cancelar" HorizontalAlignment="Left" Margin="84.811,165,0,0" VerticalAlignment="Top" Width="110" Height="39" BorderBrush="{x:Null}" Grid.Column="1">
+        <Button x:Name="buttonCancela" Content="Cancelar" HorizontalAlignment="Left" Margin="84.811,165,0,0" VerticalAlignment="Top" Width="110" Height="39" BorderBrush="{x:Null}" Grid.Column="1" Click="buttonCancela_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFD8D8" Offset="0"/>
