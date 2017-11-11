@@ -20,7 +20,10 @@ namespace CrudMaster
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Membros ============================
         private bool foundLogin = false;
+
+        //Construtores =======================
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace CrudMaster
             foundLogin = false;
         }
 
+        //Métodos
         private void loginSubmit(object sender, RoutedEventArgs e)
         {
             //Verifica se o login existe:

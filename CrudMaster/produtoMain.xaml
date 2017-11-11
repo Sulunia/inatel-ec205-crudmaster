@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="produtoMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" Closed="produtoWin_Closed" ResizeMode="CanMinimize">
+        Title="produtoMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" Closed="window_close" ResizeMode="CanMinimize">
     <Grid Margin="0,0,-1.208,-0.094">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="774*"/>
@@ -28,12 +28,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastro" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="214,253,0,0" VerticalAlignment="Top" Width="209" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Click="buttonCadastro_Click" Grid.Column="1" Background="#FFACACAC">
+        <Button x:Name="buttonCadastro" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="214,253,0,0" VerticalAlignment="Top" Width="209" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Click="cadastrar_produto" Grid.Column="1" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="214,302,0,0" VerticalAlignment="Top" Width="209" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC" Click="buttonEdita_Click">
+        <Button x:Name="buttonEdita" Content="Editar Produto" HorizontalAlignment="Left" Margin="214,302,0,0" VerticalAlignment="Top" Width="209" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF131313" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC" Click="editar_produto">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
@@ -48,7 +48,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="214,351,0,0" VerticalAlignment="Top" Width="209" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC" Click="buttonExclui_Click">
+        <Button x:Name="buttonExclui" Content="Excluir Produto" HorizontalAlignment="Left" Margin="214,351,0,0" VerticalAlignment="Top" Width="209" Height="41" FontSize="18" FontWeight="Bold" Foreground="#FF0A0A0A" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Grid.Column="1" Background="#FFACACAC" Click="excluir_produto">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>

@@ -19,6 +19,7 @@ namespace CrudMaster
     /// </summary>
     public partial class mainMenu : Window
     {
+        //Construtores ============================
         public mainMenu(string s)
         {
             InitializeComponent();
@@ -32,7 +33,8 @@ namespace CrudMaster
             userLogged.Content = "Utilizador atual: " + DAO.userLogado;
         }
 
-        private void buttonPessoas_Click(object sender, RoutedEventArgs e)
+        //Métodos =================================
+        private void gerencia_clientes(object sender, RoutedEventArgs e)
         {
             clienteMain clienteWin = new CrudMaster.clienteMain();
             clienteWin.Show();
@@ -40,7 +42,7 @@ namespace CrudMaster
             
         }
 
-        private void buttonProdutos_Click(object sender, RoutedEventArgs e)
+        private void gerencia_produtos(object sender, RoutedEventArgs e)
         {
             produtoMain produtoWin = new CrudMaster.produtoMain();
             MainMenu.Close();

@@ -19,19 +19,21 @@ namespace CrudMaster
     /// </summary>
     public partial class clienteMain : Window
     {
+        //Construtores ============================
         public clienteMain()
         {
             InitializeComponent();
-            listarClientes();
+            listar_clientes();
         }
 
-        private void clienteWin_Closed(object sender, EventArgs e)
+        //Métodos =================================
+        private void window_close(object sender, EventArgs e)
         {
             mainMenu menu = new CrudMaster.mainMenu();
             menu.Show();
         }
 
-        public void listarClientes()
+        public void listar_clientes()
         {
             listaClientes.Items.Clear();
             listaClientes.SelectionMode = SelectionMode.Single;

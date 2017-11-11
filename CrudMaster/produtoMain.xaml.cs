@@ -19,25 +19,27 @@ namespace CrudMaster
     /// </summary>
     public partial class produtoMain : Window
     {
+        //Construtores ==========================
         public produtoMain()
         {
             InitializeComponent();
             DAO.exibeProdutos(this);
         }
 
-        private void produtoWin_Closed(object sender, EventArgs e)
+        //Métodos ===============================
+        private void window_close(object sender, EventArgs e)
         {
             mainMenu menu = new CrudMaster.mainMenu();
             menu.Show();
         }
 
-        private void buttonCadastro_Click(object sender, RoutedEventArgs e)
+        private void cadastrar_produto(object sender, RoutedEventArgs e)
         {
             detalhesProduto prod = new CrudMaster.detalhesProduto(this);
             prod.Show();
         }
 
-        private void buttonEdita_Click(object sender, RoutedEventArgs e)
+        private void editar_produto(object sender, RoutedEventArgs e)
         {
             if (listaProduto.SelectedItem != null)
             {
@@ -67,7 +69,7 @@ namespace CrudMaster
             }
         }
 
-        private void buttonExclui_Click(object sender, RoutedEventArgs e)
+        private void excluir_produto(object sender, RoutedEventArgs e)
         {
             if (listaProduto.SelectedItem != null)
             {
@@ -99,5 +101,7 @@ namespace CrudMaster
                 }                          
             }
         }
+
+        //TODO: Remover método de listagem de produtos do DAO para cá.
     }
 }

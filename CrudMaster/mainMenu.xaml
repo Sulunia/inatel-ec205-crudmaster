@@ -18,12 +18,12 @@
                 <DropShadowEffect BlurRadius="46"/>
             </Image.Effect>
         </Image>
-        <Button x:Name="buttonPessoas" Content="Gerenciamento de Clientes" HorizontalAlignment="Left" Margin="126,348,0,0" VerticalAlignment="Top" Width="250" Height="46" Click="buttonPessoas_Click" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Background="#FFACACAC">
+        <Button x:Name="buttonPessoas" Content="Gerenciamento de Clientes" HorizontalAlignment="Left" Margin="126,348,0,0" VerticalAlignment="Top" Width="250" Height="46" Click="gerencia_clientes" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="40"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonProdutos" Content="Gerenciamento de Estoque" HorizontalAlignment="Left" Margin="126,419,0,0" VerticalAlignment="Top" Width="250" Height="44" Click="buttonProdutos_Click" FontFamily="NewsGoth Lt BT" FontWeight="Bold" FontSize="16" BorderBrush="Black" Foreground="Black" Background="#FFACACAC">
+        <Button x:Name="buttonProdutos" Content="Gerenciamento de Estoque" HorizontalAlignment="Left" Margin="126,419,0,0" VerticalAlignment="Top" Width="250" Height="44" Click="gerencia_produtos" FontFamily="NewsGoth Lt BT" FontWeight="Bold" FontSize="16" BorderBrush="Black" Foreground="Black" Background="#FFACACAC">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="40"/>
             </Button.Effect>

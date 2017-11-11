@@ -46,7 +46,7 @@ namespace CrudMaster
             pessoa = p;
         }
 
-        //Funções =========================================
+        //Métodos =========================================
         public void listaServico(Pessoa p, string f)
         {
             
@@ -123,14 +123,14 @@ namespace CrudMaster
                 MessageBox.Show("Cadastro alterado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 detalheCliente.servicos.Clear();
                 detalheCliente.Close();
-                w.listarClientes();
+                w.listar_clientes();
             }
             else {
                 DAO.cadastrar_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
                 MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 detalheCliente.servicos.Clear();
                 detalheCliente.Close();
-                w.listarClientes();
+                w.listar_clientes();
             }
         }
     }
