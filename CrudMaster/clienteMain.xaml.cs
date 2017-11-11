@@ -37,7 +37,7 @@ namespace CrudMaster
             listaClientes.SelectionMode = SelectionMode.Single;
             foreach (Pessoa p in DAO.pessoaLista)
             {
-                var row = new { Nome = p.nome.ToUpper(), Telefone = p.telefone };
+                var row = new { Nome = p.nome.ToUpper(), Telefone = p.telefone, Endereco = p.endereço };
                 listaClientes.Items.Add(row);
             }
         }

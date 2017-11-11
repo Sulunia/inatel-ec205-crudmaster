@@ -17,16 +17,17 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nome" Width="300" DisplayMemberBinding="{Binding Path=Nome}" />
-                    <GridViewColumn Header="Telefone" Width="350" DisplayMemberBinding="{Binding Path=Telefone}"/>
+                    <GridViewColumn Header="Telefone" Width="165" DisplayMemberBinding="{Binding Path=Telefone}"/>
+                    <GridViewColumn Header="Endereço" Width="488" DisplayMemberBinding="{Binding Path=Endereco}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="button" Content="Adicionar Cliente" HorizontalAlignment="Left" Margin="962,228,0,0" VerticalAlignment="Top" Width="253" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button_Click">
+        <Button x:Name="button" Content="Adicionar Cliente" HorizontalAlignment="Left" Margin="993,228,0,0" VerticalAlignment="Top" Width="203" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="button1" Content="Editar Cliente" HorizontalAlignment="Left" Margin="962,277,0,0" VerticalAlignment="Top" Width="253" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button1_Click">
+        <Button x:Name="button1" Content="Editar Cliente" HorizontalAlignment="Left" Margin="993,284,0,0" VerticalAlignment="Top" Width="203" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button1_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
