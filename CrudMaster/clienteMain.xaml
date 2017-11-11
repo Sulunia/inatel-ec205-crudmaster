@@ -22,12 +22,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="button" Content="Adicionar Cliente" HorizontalAlignment="Left" Margin="993,228,0,0" VerticalAlignment="Top" Width="203" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button_Click">
+        <Button x:Name="button" Content="Adicionar Cliente" HorizontalAlignment="Left" Margin="989,228,0,0" VerticalAlignment="Top" Width="207" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="button1" Content="Editar Cliente" HorizontalAlignment="Left" Margin="993,284,0,0" VerticalAlignment="Top" Width="203" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button1_Click">
+        <Button x:Name="button1" Content="Editar Cliente" HorizontalAlignment="Left" Margin="989,284,0,0" VerticalAlignment="Top" Width="207" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="button1_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
