@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="Microtec Gerenciador" Height="531" Width="512" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF333337">
+        Title="Microtec Gerenciador" Height="587.503" Width="512" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF333337">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -28,6 +28,7 @@
                 <DropShadowEffect BlurRadius="40"/>
             </Button.Effect>
         </Button>
+        <Label x:Name ="userLogged" Content="Utilizador atual: " HorizontalAlignment="Left" Margin="0,519,0,0" VerticalAlignment="Top" Foreground="#FFA7BEFF" FontSize="16"/>
 
     </Grid>
 </Window>

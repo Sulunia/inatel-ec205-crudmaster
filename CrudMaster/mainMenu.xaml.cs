@@ -19,10 +19,17 @@ namespace CrudMaster
     /// </summary>
     public partial class mainMenu : Window
     {
+        public mainMenu(string s)
+        {
+            InitializeComponent();
+            DAO.userLogado = s;
+            userLogged.Content = "Utilizador atual: " + s;
+        }
+
         public mainMenu()
         {
             InitializeComponent();
-            
+            userLogged.Content = "Utilizador atual: " + DAO.userLogado;
         }
 
         private void buttonPessoas_Click(object sender, RoutedEventArgs e)

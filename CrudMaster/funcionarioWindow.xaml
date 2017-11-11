@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="funcionarioMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="funcionarioMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closed="funcWin_Closed">
     <Grid Margin="0,0,-1.208,-0.094">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,7 +13,7 @@
                 <GradientStop Color="#FF131313" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Foreground="Black" Background="#FFACACAC">
+        <ListView x:Name="funcView" HorizontalAlignment="Left" Height="575" Margin="10,41,0,0" VerticalAlignment="Top" Width="961" Foreground="Black" Background="#FFACACAC">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -22,16 +22,17 @@
             </ListView.BorderBrush>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Nome do funcionário" Width="480" DisplayMemberBinding="{Binding Path=Nome}" />
+                    <GridViewColumn Header="Nome de usuário" Width="200" DisplayMemberBinding="{Binding Path=Login}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC">
+        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="buttonCadastra_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC">
+        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="buttonRemove_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
