@@ -35,16 +35,6 @@ namespace CrudMaster
         //Métodos =========================================
         private void cadastra_funcionario(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            p.nome = boxNome.Text;
-            p.senha = boxSenha.Text;
-            p.username = boxLogin.Text;
-            DAO.cadastrar_funcionario(p);
-            MessageBox.Show("Cadastrado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-            janAnterior.listar_funcionarios();
-            this.Close();
-            
-=======
             if(checaPalavra(boxNome.Text, false) == false || checaPalavra(boxSenha.Text, true) == false || checaPalavra(boxLogin.Text, true) == false)
                 MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
             else
@@ -52,12 +42,11 @@ namespace CrudMaster
                 p.nome = boxNome.Text;
                 p.senha = boxSenha.Text;
                 p.username = boxLogin.Text;
-                DAO.addFuncionario(p);
+                DAO.cadastrar_funcionario(p);
                 MessageBox.Show("Cadastrado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-                janAnterior.listarFuncionarios();
+                janAnterior.listar_funcionarios();
                 this.Close();
             }           
->>>>>>> backendDev
         }
 
         private void voltar(object sender, RoutedEventArgs e)

@@ -42,12 +42,12 @@ namespace CrudMaster
             servicos = p.servicos;
             this.index = index;
 
-            listaServico(p, "");
+            listar_servico(p, "");
             pessoa = p;
         }
 
         //Métodos =========================================
-        public void listaServico(Pessoa p, string f)
+        public void listar_servico(Pessoa p, string f)
         {
             
             servicosView.SelectionMode = SelectionMode.Single;
@@ -119,29 +119,15 @@ namespace CrudMaster
         {
             if (index != -1)
             {
-<<<<<<< HEAD
-                DAO.edita_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
-                MessageBox.Show("Cadastro alterado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-                detalheCliente.servicos.Clear();
-                detalheCliente.Close();
-                w.listar_clientes();
-            }
-            else {
-                DAO.cadastrar_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
-                MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-                detalheCliente.servicos.Clear();
-                detalheCliente.Close();
-                w.listar_clientes();
-=======
                 if (checaPalavra(nomeBox.Text, false) == false || checaNum(telefoneBox.Text) == false || checaPalavra(emailBox.Text, true) == false || checaNum(CPFBox.Text) == false || checaPalavra(enderecoBox.Text, true) == false)
                     MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
-                    DAO.replacePessoa(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
+                    DAO.edita_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
                     MessageBox.Show("Cadastro alterado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                     detalheCliente.servicos.Clear();
                     detalheCliente.Close();
-                    w.listarClientes();
+                    w.listar_clientes();
                 }                
             }
             else {
@@ -149,11 +135,11 @@ namespace CrudMaster
                     MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
-                    DAO.addCliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
+                    DAO.cadastrar_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
                     MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                     detalheCliente.servicos.Clear();
                     detalheCliente.Close();
-                    w.listarClientes();
+                    w.listar_clientes();
                 }                
             }
         }
@@ -190,7 +176,6 @@ namespace CrudMaster
                     if(value == 35 || value == 37 || value == 58)
                         return false;
                 }
->>>>>>> backendDev
             }
             return true;
         }
