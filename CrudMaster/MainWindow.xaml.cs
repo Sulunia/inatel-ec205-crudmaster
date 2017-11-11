@@ -27,7 +27,7 @@ namespace CrudMaster
         public MainWindow()
         {
             InitializeComponent();
-            DAO.initialize();
+            DAO.inicializar_dados();
             foundLogin = false;
         }
 

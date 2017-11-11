@@ -78,7 +78,7 @@ namespace CrudMaster
             }
         }
 
-        public static void initialize()
+        public static void inicializar_dados()
         {
             string line;
 
