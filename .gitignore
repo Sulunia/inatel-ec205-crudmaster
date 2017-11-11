@@ -204,3 +204,8 @@ $RECYCLE.BIN/
 #####
 *.txt
 *.txt
+<<<<<<< HEAD
+=======
+*.txt
+>>>>>>> produtos
+*.txt

@@ -70,21 +70,81 @@ namespace CrudMaster
         {
             if(edit == true)
             {
-                novo = new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text);
-                DAO.editaProduto(antigo, novo);
+                if (checaNum(comboNum.Text, true) == false || checaNum(boxPreco.Text, false) == false || checaPalavra(boxNome.Text) == false || checaPalavra(boxFabr.Text) == false)
+                    MessageBox.Show("Por favor preencha os campos corretamente!", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                else
+                {
+                    novo = new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text);
+                    DAO.editaProduto(antigo, novo);
 
-                MessageBox.Show("Edição realizada com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);                
-                this.Close();
-                DAO.exibeProdutos(pM);
-
+                    MessageBox.Show("Edição realizada com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close();
+                    DAO.exibeProdutos(pM);
+                }
             }
             else
             {
-                DAO.addProduto(new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text));
-                MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-                this.Close();
-                DAO.exibeProdutos(pM);
+
+                //if (!int.TryParse(comboNum.Text, out int number) )
+                if(checaNum(comboNum.Text, true) == false || checaNum(boxPreco.Text, false) == false || checaPalavra(boxNome.Text) == false || checaPalavra(boxFabr.Text) == false)
+                    MessageBox.Show("Por favor preencha os campos corretamente!", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                else
+                {
+                    DAO.addProduto(new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text));
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close();
+                    DAO.exibeProdutos(pM);
+                }
             }
         }
+        private bool checaNum(string sVal, bool quant)
+        {
+            int value, countN = 0, countV = 0;
+            bool after = false;
+            foreach (char c in sVal)
+            {
+                if (quant != true)
+                {
+                    value = Convert.ToInt32(c);
+                    if ((value > 57) || (value < 48))
+                        if (value != 44)
+                            return false;
+                    if (after == true)
+                        countN++;
+                    if (value == 44)
+                    {
+                        after = true;
+                        countV++;
+                    }
+                    if ((countV > 1) || (countN > 2))
+                        return false;
+                }
+                else
+                {
+                    value = Convert.ToInt32(c);
+                    Console.WriteLine(value);
+                    if ((value > 57) || (value < 48))
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        private bool checaPalavra(string checa)
+        {
+            int value;
+            foreach (char c in checa)
+            {
+                value = Convert.ToInt32(c);
+                if ((value < 65) || (value > 90))
+                    if ((value < 97) || (value > 122))
+                        if ((value > 57) || (value < 48))
+                            return false;               
+                
+            }
+            return true;
+        }
+
+
     }
 }
