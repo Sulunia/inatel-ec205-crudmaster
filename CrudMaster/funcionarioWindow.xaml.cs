@@ -52,11 +52,15 @@ namespace CrudMaster
 
         private void buttonRemove_Click(object sender, RoutedEventArgs e)
         {
-            if(funcView.SelectedIndex != -1)
+            if (funcView.SelectedIndex != -1)
             {
-                var index = funcView.SelectedIndex;
-                DAO.removeFuncionario(DAO.funcionarioLista[index]);
-                listarFuncionarios();
+                MessageBoxResult result = MessageBox.Show("Deseja mesmo remover o funcionário selecionado?", "Atenção", MessageBoxButton.OKCancel, MessageBoxImage.Asterisk);
+                if (result == MessageBoxResult.OK)
+                {
+                    var index = funcView.SelectedIndex;
+                    DAO.removeFuncionario(DAO.funcionarioLista[index]);
+                    listarFuncionarios();
+                }
             }
         }
     }

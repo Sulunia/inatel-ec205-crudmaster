@@ -20,10 +20,12 @@ namespace CrudMaster
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool foundLogin = false;
         public MainWindow()
         {
             InitializeComponent();
             DAO.initialize();
+            foundLogin = false;
         }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
@@ -46,9 +48,14 @@ namespace CrudMaster
                             mainMenu menu = new CrudMaster.mainMenu(item.nome);
                             menu.Show();
                             this.Close();
+                            foundLogin = true;
                             break;
                         }
                     }
+                }
+                if (!foundLogin)
+                {
+                    MessageBox.Show("Login ou senha digitados incorretamente!", "Erro ao fazer login", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
