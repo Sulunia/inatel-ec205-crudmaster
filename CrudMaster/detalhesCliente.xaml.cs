@@ -120,7 +120,7 @@ namespace CrudMaster
             if (index != -1)
             {
                 if (checaPalavra(nomeBox.Text, false) == false || checaNum(telefoneBox.Text) == false || checaPalavra(emailBox.Text, true) == false || checaNum(CPFBox.Text) == false || checaPalavra(enderecoBox.Text, true) == false)
-                    MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%', ':' e acentos/ç.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
                     DAO.edita_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
@@ -166,9 +166,10 @@ namespace CrudMaster
                 if(aux == false)
                 {
                     value = Convert.ToInt32(c);
-                    if ((value < 65) || (value > 90))
-                        if ((value < 97) || (value > 122))
-                            return false;
+                    if((value != 32))
+                        if ((value < 65) || (value > 90))
+                            if ((value < 97) || (value > 122))
+                                return false;
                 }
                 else
                 {
