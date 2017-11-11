@@ -30,7 +30,7 @@
         <TextBox x:Name="boxFabr" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.943,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Foreground="White" Background="#FF1F1F1F"/>
         <ComboBox x:Name="comboNum" Grid.Column="1" HorizontalAlignment="Left" Margin="9.943,73,0,0" VerticalAlignment="Top" Width="69" IsEditable="True" Background="#FF1F1F1F">
         </ComboBox>
-        <Button x:Name="buttonSalvar" Content="Salvar" Grid.Column="1" HorizontalAlignment="Left" Margin="72.943,16.264,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="28" BorderBrush="{x:Null}">
+        <Button x:Name="buttonSalvar" Content="Salvar" Grid.Column="1" HorizontalAlignment="Left" Margin="72.943,16.264,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="28" BorderBrush="{x:Null}" Click="buttonSalvar_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD2FFD5" Offset="0"/>
