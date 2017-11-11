@@ -17,7 +17,7 @@ namespace CrudMaster
 
         public static StreamReader clienteFile;
         public static StreamReader produtoFile;
-
+        
         public static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
 
         public static void addCliente(Pessoa p)
@@ -27,6 +27,49 @@ namespace CrudMaster
             Debug.WriteLine("[DAO] Info: " + p.ToString());
             File.AppendAllText((path + @"\Clientes.txt"), p.ToString()+ '\r' + '\n');
             Debug.WriteLine("[DAO] Appended new Pessoa to persistent file.");
+        }
+
+        public static void addProduto(Produto prod)
+        {
+            produtoLista.Add(prod);
+            File.AppendAllText((path + @"\Produtos.txt"), prod.aux() + Environment.NewLine);
+        }
+
+        public static void exibeProdutos(produtoMain pM)
+        {
+            pM.listaProduto.Items.Clear();
+            produtoFile = new StreamReader((path + @"\Produtos.txt"));
+            string line;       
+            while ((line = produtoFile.ReadLine()) != null)
+            {
+                string[] parts = line.Split('/');
+                var row = new { Nome = parts[0], Quantidade = parts[1], Preço = parts[2], Fabricante = parts[3] };
+                pM.listaProduto.Items.Add(row);
+            }
+            produtoFile.Close();
+        }
+
+        public static void editaProduto(Produto antigo, Produto novo)
+        {
+            string text = File.ReadAllText(path + @"\Produtos.txt");
+            text = text.Replace(antigo.nome + "/" + antigo.quantidade + "/" + antigo.preco + "/" + antigo.fabricante, novo.nome + "/" + novo.quantidade + "/" + novo.preco + "/" + novo.fabricante);
+            File.WriteAllText((path + @"\Produtos.txt"), text);
+        }
+
+        public static void excluiProduto(Produto p)
+        {
+            string[] lines = System.IO.File.ReadAllLines(path + @"\Produtos.txt");
+
+            using (System.IO.StreamWriter writer = new System.IO.StreamWriter(path + @"\Produtos.txt"))
+            {
+                foreach (string line in lines)
+                {
+                    if (!line.Contains(p.nome + "/" + p.quantidade + "/" + p.preco + "/" + p.fabricante))
+                    {
+                        writer.WriteLine(line);
+                    }
+                }
+            }
         }
 
         public static void initialize()
