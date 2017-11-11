@@ -94,7 +94,7 @@ namespace CrudMaster
                 MessageBoxResult result = MessageBox.Show("Realmente deseja excluir esse produto?", "Excluir produto", MessageBoxButton.YesNo);
                 if(result == MessageBoxResult.Yes)
                 {
-                    DAO.excluiProduto(p2);
+                    DAO.excluir_produto(p2);
                     DAO.exibeProdutos(this);
                 }                          
             }

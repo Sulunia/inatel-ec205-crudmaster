@@ -28,7 +28,7 @@ namespace CrudMaster
             foundLogin = false;
         }
 
-        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
+        private void loginSubmit(object sender, RoutedEventArgs e)
         {
             //Verifica se o login existe:
             if (String.Equals(usernameBox.Text, "admin") && String.Equals(passwordInput.Password.ToString(), "crudmaster"))

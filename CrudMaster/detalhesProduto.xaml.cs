@@ -75,7 +75,7 @@ namespace CrudMaster
                 else
                 {
                     novo = new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text);
-                    DAO.editaProduto(antigo, novo);
+                    DAO.edita_produto(antigo, novo);
 
                     MessageBox.Show("Edição realizada com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                     this.Close();
@@ -90,7 +90,7 @@ namespace CrudMaster
                     MessageBox.Show("Por favor preencha os campos corretamente!", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
-                    DAO.addProduto(new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text));
+                    DAO.cadastrar_produto(new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text));
                     MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                     this.Close();
                     DAO.exibeProdutos(pM);

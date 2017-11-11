@@ -11,18 +11,22 @@ namespace CrudMaster
 {
     class DAO
     {
+        //Listas de acesso públicas
         public static List<Pessoa> pessoaLista = new List<Pessoa>();
         public static List<Produto> produtoLista = new List<Produto>();
         public static List<Funcionario> funcionarioLista = new List<Funcionario>();
 
+        //Handlers de arquivo para leitura e escrita
         public static StreamReader clienteFile;
         public static StreamReader produtoFile;
         public static StreamReader funcionarioFile;
 
+        //Variáveis miscelâneas
         public static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
         public static string userLogado { get; set; } = "";
 
-        public static void addCliente(Pessoa p)
+        //Funções
+        public static void cadastrar_cliente(Pessoa p)
         {
             pessoaLista.Add(p);
             Debug.WriteLine("[DAO] Added new Pessoa to list.");
@@ -31,7 +35,7 @@ namespace CrudMaster
             Debug.WriteLine("[DAO] Appended new Pessoa to persistent file.");
         }
 
-        public static void addProduto(Produto prod)
+        public static void cadastrar_produto(Produto prod)
         {
             produtoLista.Add(prod);
             File.AppendAllText((path + @"\Produtos.txt"), prod.aux() + Environment.NewLine);
@@ -51,14 +55,14 @@ namespace CrudMaster
             produtoFile.Close();
         }
 
-        public static void editaProduto(Produto antigo, Produto novo)
+        public static void edita_produto(Produto antigo, Produto novo)
         {
             string text = File.ReadAllText(path + @"\Produtos.txt");
             text = text.Replace(antigo.nome + "/" + antigo.quantidade + "/" + antigo.preco + "/" + antigo.fabricante, novo.nome + "/" + novo.quantidade + "/" + novo.preco + "/" + novo.fabricante);
             File.WriteAllText((path + @"\Produtos.txt"), text);
         }
 
-        public static void excluiProduto(Produto p)
+        public static void excluir_produto(Produto p)
         {
             string[] lines = System.IO.File.ReadAllLines(path + @"\Produtos.txt");
 
@@ -183,7 +187,7 @@ namespace CrudMaster
             funcionarioFile.Close();
         }
 
-        public static void replacePessoa(Pessoa p, int index)
+        public static void edita_cliente(Pessoa p, int index)
         {
             pessoaLista.ElementAt(index).nome = p.nome;
             pessoaLista.ElementAt(index).endereço = p.endereço;
@@ -203,14 +207,14 @@ namespace CrudMaster
             File.WriteAllText(path + @"\Clientes.txt", text);
         }
 
-        public static void addFuncionario(Funcionario p)
+        public static void cadastrar_funcionario(Funcionario p)
         {
             funcionarioLista.Add(p);
             File.AppendAllText((path + @"\Funcionarios.txt"), p.ToString() + '\r' + '\n');
             Debug.WriteLine("[DAO] Wrote '" + p.ToString() + "' to the file.");
         }
 
-        public static void removeFuncionario(Funcionario removido)
+        public static void excluir_funcionario(Funcionario removido)
         {
             //Remove funcionario da lista de funcionarios
             foreach (Funcionario item in funcionarioLista)

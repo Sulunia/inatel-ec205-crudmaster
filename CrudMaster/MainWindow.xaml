@@ -35,7 +35,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <Button x:Name="buttonSubmit" Content="Entrar" HorizontalAlignment="Left" Margin="14.906,178,0,0" VerticalAlignment="Top" Width="135" Height="25" Click="buttonSubmit_Click" FontFamily="NewsGoth Lt BT" FontWeight="Bold" FontSize="14" Foreground="Black" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Background="#FFACACAC" Grid.Column="1" Grid.ColumnSpan="2">
+        <Button x:Name="buttonSubmit" Content="Entrar" HorizontalAlignment="Left" Margin="14.906,178,0,0" VerticalAlignment="Top" Width="135" Height="25" Click="loginSubmit" FontFamily="NewsGoth Lt BT" FontWeight="Bold" FontSize="14" Foreground="Black" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Background="#FFACACAC" Grid.Column="1" Grid.ColumnSpan="2">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

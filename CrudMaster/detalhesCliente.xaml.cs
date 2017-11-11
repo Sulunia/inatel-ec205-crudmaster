@@ -125,14 +125,14 @@ namespace CrudMaster
         {
             if (index != -1)
             {
-                DAO.replacePessoa(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
+                DAO.edita_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos), index);
                 MessageBox.Show("Cadastro alterado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 detalheCliente.servicos.Clear();
                 detalheCliente.Close();
                 w.listarClientes();
             }
             else {
-                DAO.addCliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
+                DAO.cadastrar_cliente(new Pessoa(nomeBox.Text, telefoneBox.Text, CPFBox.Text, enderecoBox.Text, emailBox.Text, servicos));
                 MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 detalheCliente.servicos.Clear();
                 detalheCliente.Close();

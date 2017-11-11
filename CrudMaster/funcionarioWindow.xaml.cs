@@ -58,7 +58,7 @@ namespace CrudMaster
                 if (result == MessageBoxResult.OK)
                 {
                     var index = funcView.SelectedIndex;
-                    DAO.removeFuncionario(DAO.funcionarioLista[index]);
+                    DAO.excluir_funcionario(DAO.funcionarioLista[index]);
                     listarFuncionarios();
                 }
             }
