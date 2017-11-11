@@ -20,6 +20,7 @@ namespace CrudMaster
         public static StreamReader funcionarioFile;
 
         public static string path = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
+        public static string userLogado { get; set; } = "";
 
         public static void addCliente(Pessoa p)
         {

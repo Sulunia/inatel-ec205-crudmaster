@@ -37,9 +37,19 @@ namespace CrudMaster
             }
             else
             {
-                mainMenu menu = new CrudMaster.mainMenu();
-                menu.Show();
-                loginScreen.Close();
+                foreach (Funcionario item in DAO.funcionarioLista)
+                {
+                    if(String.Equals(item.username, usernameBox.Text))
+                    {
+                        if(String.Equals(item.senha, passwordInput.Password.ToString()))
+                        {
+                            mainMenu menu = new CrudMaster.mainMenu(item.nome);
+                            menu.Show();
+                            this.Close();
+                            break;
+                        }
+                    }
+                }
             }
         }
 
