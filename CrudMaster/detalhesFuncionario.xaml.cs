@@ -35,7 +35,7 @@ namespace CrudMaster
         //Métodos =========================================
         private void cadastra_funcionario(object sender, RoutedEventArgs e)
         {
-            if(checaPalavra(boxNome.Text, false) == false || checaPalavra(boxSenha.Text, true) == false || checaPalavra(boxLogin.Text, true) == false)
+            if(checa_palavra(boxNome.Text, false) == false || checa_palavra(boxSenha.Text, true) == false || checa_palavra(boxLogin.Text, true) == false)
                 MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
             else
             {
@@ -54,7 +54,7 @@ namespace CrudMaster
             this.Close();
         }
 
-        private bool checaPalavra(string checa, bool aux)
+        private bool checa_palavra(string checa, bool aux)
         {
             int value;
             foreach (char c in checa)
@@ -62,9 +62,10 @@ namespace CrudMaster
                 if (aux == false)
                 {
                     value = Convert.ToInt32(c);
-                    if ((value < 65) || (value > 90))
-                        if ((value < 97) || (value > 122))
-                            return false;
+                    if(value != 32)
+                        if ((value < 65) || (value > 90))
+                           if ((value < 97) || (value > 122))
+                                return false;
                 }
                 else
                 {

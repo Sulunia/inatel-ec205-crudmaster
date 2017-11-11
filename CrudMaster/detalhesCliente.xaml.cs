@@ -119,7 +119,7 @@ namespace CrudMaster
         {
             if (index != -1)
             {
-                if (checaPalavra(nomeBox.Text, false) == false || checaNum(telefoneBox.Text) == false || checaPalavra(emailBox.Text, true) == false || checaNum(CPFBox.Text) == false || checaPalavra(enderecoBox.Text, true) == false)
+                if (checa_palavra(nomeBox.Text, false) == false || checa_numero(telefoneBox.Text) == false || checa_palavra(emailBox.Text, true) == false || checa_numero(CPFBox.Text) == false || checa_palavra(enderecoBox.Text, true) == false)
                     MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%', ':' e acentos/ç.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
@@ -131,7 +131,7 @@ namespace CrudMaster
                 }                
             }
             else {
-                if(checaPalavra(nomeBox.Text, false) == false || checaNum(telefoneBox.Text) == false || checaPalavra(emailBox.Text, true) == false || checaNum(CPFBox.Text) == false || checaPalavra(enderecoBox.Text, true) == false)
+                if(checa_palavra(nomeBox.Text, false) == false || checa_numero(telefoneBox.Text) == false || checa_palavra(emailBox.Text, true) == false || checa_numero(CPFBox.Text) == false || checa_palavra(enderecoBox.Text, true) == false)
                     MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
@@ -144,7 +144,7 @@ namespace CrudMaster
             }
         }
 
-        private bool checaNum(string sVal)
+        private bool checa_numero(string sVal)
         {
             int value;
 
@@ -158,7 +158,7 @@ namespace CrudMaster
             return true;
         }
 
-        private bool checaPalavra(string checa, bool aux)
+        private bool checa_palavra(string checa, bool aux)
         {
             int value;
             foreach (char c in checa)
