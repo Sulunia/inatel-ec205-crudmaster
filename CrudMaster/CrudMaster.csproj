@@ -56,6 +56,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAO.cs" />
+    <Compile Include="detalhesFuncionario.xaml.cs">
+      <DependentUpon>detalhesFuncionario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Funcionario.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Servico.cs" />
@@ -68,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="detalheServico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="detalhesFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

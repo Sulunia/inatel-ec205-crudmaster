@@ -8,14 +8,26 @@ namespace CrudMaster
 {
     class Funcionario
     {
-        string nome { get; set; }
-        string senha { get; set; } //Nunca jamais de forma alguma salve sua senha como string!
-                                   //Masssss... Dessa vez, só dessa vez!... A gente deixa passar.
+        public string nome { get; set; }
+        public string senha { get; set; } //Nunca jamais de forma alguma salve sua senha como string!
+                                          //Masssss... Dessa vez, só dessa vez!... A gente deixa passar.
+        public string username { get; set; }
 
         public Funcionario(string nome, string senha)
         {
             this.nome = nome;
             this.senha = senha; //Meu deus, que horrível
+        }
+
+        public Funcionario()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            string result = this.nome + ":" + this.senha + ":" + this.username ;
+            return result;
         }
     }
 

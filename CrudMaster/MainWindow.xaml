@@ -46,6 +46,6 @@
                 <DropShadowEffect BlurRadius="40"/>
             </Button.Effect>
         </Button>
-        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="82,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1" Background="#FF1F1F1F" Foreground="White"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="82,120,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Column="1" Background="#FF1F1F1F" Foreground="White"/>
     </Grid>
 </Window>

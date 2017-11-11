@@ -28,10 +28,19 @@ namespace CrudMaster
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
-            mainMenu menu = new CrudMaster.mainMenu();
-            menu.Show();
-            loginScreen.Close();
-            
+            //Verifica se o login existe:
+            if (String.Equals(usernameBox.Text, "admin") && String.Equals(passwordInput.Password.ToString(), "crudmaster"))
+            {
+                funcionarioWindow funcWin = new CrudMaster.funcionarioWindow();
+                funcWin.Show();
+                loginScreen.Close();
+            }
+            else
+            {
+                mainMenu menu = new CrudMaster.mainMenu();
+                menu.Show();
+                loginScreen.Close();
+            }
         }
 
     }

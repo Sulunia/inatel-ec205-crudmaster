@@ -26,7 +26,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC">
+        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="buttonCadastra_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>

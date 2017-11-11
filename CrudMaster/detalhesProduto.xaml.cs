@@ -20,7 +20,6 @@ namespace CrudMaster
     public partial class detalhesProduto : Window
     {
         private List<int> numbers;
-        private Produto prod;
         private Produto antigo;
         private Produto novo;
         private produtoMain pM;

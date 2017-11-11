@@ -23,5 +23,11 @@ namespace CrudMaster
         {
             InitializeComponent();
         }
+
+        private void buttonCadastra_Click(object sender, RoutedEventArgs e)
+        {
+            detalhesFuncionario detFunc = new detalhesFuncionario();
+            detFunc.Show();
+        }
     }
 }
