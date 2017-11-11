@@ -44,6 +44,14 @@ namespace CrudMaster
         public detalhesProduto(produtoMain pM, Produto prod, bool edit)
         {
             InitializeComponent();
+
+            numbers = new List<int>();
+            for (int i = 0; i <= 300; i++)
+            {
+                numbers.Add(i);
+            }
+            comboNum.ItemsSource = numbers;
+
             this.antigo = prod;
             this.pM = pM;
             this.edit = edit;
