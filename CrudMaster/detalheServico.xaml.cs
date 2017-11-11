@@ -19,9 +19,11 @@ namespace CrudMaster
     /// </summary>
     public partial class detalheServico : Window
     {
+        //Membros ==============================
         private detalhesCliente janelaAnterior;
         private Pessoa pessoa;
 
+        //Construtores =========================
         public detalheServico(detalhesCliente w, Pessoa p)
         {
             InitializeComponent();
@@ -30,16 +32,17 @@ namespace CrudMaster
             pessoa = p;
         }
 
-        private void buttonCancela_Click(object sender, RoutedEventArgs e)
+        //Métodos ==============================
+        private void voltar(object sender, RoutedEventArgs e)
         {
             detalheServicos.Close();
         }
 
-        private void buttonSalvar_Click(object sender, RoutedEventArgs e)
+        private void cadastrar_servico(object sender, RoutedEventArgs e)
         {
             Servico serv = new Servico(boxDescricao.Text, Convert.ToDateTime(servicoCalendar.SelectedDate));
-            janelaAnterior.addServicoToCliente(serv.ToString());
-            janelaAnterior.listarServicos(pessoa, serv.ToString());
+            janelaAnterior.adicionar_servico_arquivo(serv.ToString());
+            janelaAnterior.listaServico(pessoa, serv.ToString());
             this.Close();
         }
     }

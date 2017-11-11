@@ -20,20 +20,22 @@ namespace CrudMaster
     /// </summary>
     public partial class funcionarioWindow : Window
     {
+        //Construtores =======================================
         public funcionarioWindow()
         {
             InitializeComponent();
-            listarFuncionarios();
+            listar_funcionarios();
         }
 
-        private void buttonCadastra_Click(object sender, RoutedEventArgs e)
+        //Métodos ============================================
+        private void cadastrar_funcionario(object sender, RoutedEventArgs e)
         {
             detalhesFuncionario detFunc = new detalhesFuncionario(this);
             detFunc.Show();
 
         }
 
-        public void listarFuncionarios()
+        public void listar_funcionarios()
         {
             funcView.SelectionMode = SelectionMode.Single;
             funcView.Items.Clear();
@@ -44,13 +46,13 @@ namespace CrudMaster
             }
         }
 
-        private void funcWin_Closed(object sender, EventArgs e)
+        private void window_close(object sender, EventArgs e)
         {
             MainWindow login = new MainWindow();
             login.Show();
         }
 
-        private void buttonRemove_Click(object sender, RoutedEventArgs e)
+        private void excluir_funcionario(object sender, RoutedEventArgs e)
         {
             if (funcView.SelectedIndex != -1)
             {
@@ -59,7 +61,7 @@ namespace CrudMaster
                 {
                     var index = funcView.SelectedIndex;
                     DAO.excluir_funcionario(DAO.funcionarioLista[index]);
-                    listarFuncionarios();
+                    listar_funcionarios();
                 }
             }
         }

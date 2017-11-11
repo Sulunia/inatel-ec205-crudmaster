@@ -20,9 +20,11 @@ namespace CrudMaster
     /// </summary>
     public partial class detalhesFuncionario : Window
     {
+        //Membros =========================================
         private Funcionario p;
         funcionarioWindow janAnterior;
 
+        //Construtores ====================================
         public detalhesFuncionario(funcionarioWindow e)
         {
             InitializeComponent();
@@ -30,19 +32,20 @@ namespace CrudMaster
             janAnterior = e;
         }
 
-        private void buttonSalvar_Click(object sender, RoutedEventArgs e)
+        //Métodos =========================================
+        private void cadastra_funcionario(object sender, RoutedEventArgs e)
         {
             p.nome = boxNome.Text;
             p.senha = boxSenha.Text;
             p.username = boxLogin.Text;
             DAO.cadastrar_funcionario(p);
             MessageBox.Show("Cadastrado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-            janAnterior.listarFuncionarios();
+            janAnterior.listar_funcionarios();
             this.Close();
             
         }
 
-        private void buttonCancela_Click(object sender, RoutedEventArgs e)
+        private void voltar(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

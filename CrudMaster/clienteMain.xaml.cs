@@ -42,13 +42,13 @@ namespace CrudMaster
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void cadastrar_clientes(object sender, RoutedEventArgs e)
         {
             detalhesCliente clientWin = new CrudMaster.detalhesCliente(this);
             clientWin.Show();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void editar_clientes(object sender, RoutedEventArgs e)
         {
             if(listaClientes.SelectedItem != null)
             {

@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace CrudMaster
 {
@@ -20,11 +10,14 @@ namespace CrudMaster
     /// </summary>
     public partial class detalhesCliente : Window
     {
+        //Membros ========================================
         public List<Servico> servicos { get; set; }
         private clienteMain w;
         private Pessoa pessoa;
-        private bool flag = false;
+        private bool flag = false; //Flag para controle da listagem
         private int index { get; set; } = -1;
+
+        //Construtores ===================================
         public detalhesCliente(clienteMain w)
         {
             this.w = w;
@@ -49,11 +42,12 @@ namespace CrudMaster
             servicos = p.servicos;
             this.index = index;
 
-            listarServicos(p, "");
+            listaServico(p, "");
             pessoa = p;
         }
 
-        public void listarServicos(Pessoa p, string f)
+        //Funções =========================================
+        public void listaServico(Pessoa p, string f)
         {
             
             servicosView.SelectionMode = SelectionMode.Single;
@@ -102,7 +96,7 @@ namespace CrudMaster
             }
         }
 
-        public void addServicoToCliente(string s)
+        public void adicionar_servico_arquivo(string s)
         {
             //Por algum motivo obscuro, o C# não me permite mandar o servico direto.
             //Então converto ele pra string...e de volta.
@@ -110,18 +104,18 @@ namespace CrudMaster
             servicos.Add(serv);
         }
 
-        private void adicionaServico_Click(object sender, RoutedEventArgs e)
+        private void cadastrar_servico(object sender, RoutedEventArgs e)
         {
             detalheServico detalhe = new CrudMaster.detalheServico(this, pessoa);
             detalhe.Show();
         }
 
-        private void buttonCancelar_Click(object sender, RoutedEventArgs e)
+        private void voltar(object sender, RoutedEventArgs e)
         {
             detalheCliente.Close();
         }
 
-        private void salvarButton_Click(object sender, RoutedEventArgs e)
+        private void cadastrar_cliente(object sender, RoutedEventArgs e)
         {
             if (index != -1)
             {

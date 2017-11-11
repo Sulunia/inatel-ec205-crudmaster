@@ -19,13 +19,14 @@ namespace CrudMaster
     /// </summary>
     public partial class detalhesProduto : Window
     {
+        //Membros =============================================
         private List<int> numbers;
         private Produto antigo;
         private Produto novo;
         private produtoMain pM;
         private bool edit;
 
-
+        //Construtores ========================================
         public detalhesProduto(produtoMain pM)
         {
             InitializeComponent();
@@ -61,16 +62,17 @@ namespace CrudMaster
 
         }
 
-        private void buttonCancela_Click(object sender, RoutedEventArgs e)
+        //Métodos =============================================
+        private void voltar(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void buttonSalvar_Click(object sender, RoutedEventArgs e)
+        private void cadastrar_produto(object sender, RoutedEventArgs e)
         {
             if(edit == true)
             {
-                if (checaNum(comboNum.Text, true) == false || checaNum(boxPreco.Text, false) == false || checaPalavra(boxNome.Text) == false || checaPalavra(boxFabr.Text) == false)
+                if (checar_numero(comboNum.Text, true) == false || checar_numero(boxPreco.Text, false) == false || checar_palavra(boxNome.Text) == false || checar_palavra(boxFabr.Text) == false)
                     MessageBox.Show("Por favor preencha os campos corretamente!", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
@@ -86,7 +88,7 @@ namespace CrudMaster
             {
 
                 //if (!int.TryParse(comboNum.Text, out int number) )
-                if(checaNum(comboNum.Text, true) == false || checaNum(boxPreco.Text, false) == false || checaPalavra(boxNome.Text) == false || checaPalavra(boxFabr.Text) == false)
+                if(checar_numero(comboNum.Text, true) == false || checar_numero(boxPreco.Text, false) == false || checar_palavra(boxNome.Text) == false || checar_palavra(boxFabr.Text) == false)
                     MessageBox.Show("Por favor preencha os campos corretamente!", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 else
                 {
@@ -97,7 +99,8 @@ namespace CrudMaster
                 }
             }
         }
-        private bool checaNum(string sVal, bool quant)
+
+        private bool checar_numero(string sVal, bool quant)
         {
             int value, countN = 0, countV = 0;
             bool after = false;
@@ -130,7 +133,7 @@ namespace CrudMaster
             return true;
         }
 
-        private bool checaPalavra(string checa)
+        private bool checar_palavra(string checa)
         {
             int value;
             foreach (char c in checa)

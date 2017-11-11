@@ -47,7 +47,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="317,592,0,0" VerticalAlignment="Top" Width="132" Height="38" Grid.ColumnSpan="2" Click="adicionaServico_Click" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
+        <Button x:Name="adicionaServico" Content="Adicionar Serviço" HorizontalAlignment="Left" Margin="317,592,0,0" VerticalAlignment="Top" Width="132" Height="38" Grid.ColumnSpan="2" Click="cadastrar_servico" BorderBrush="Black" FontFamily="NewsGoth Lt BT">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFB7EEB4" Offset="0"/>
@@ -55,7 +55,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="salvarButton" Content="Salvar" Margin="102,649,120.094,0" VerticalAlignment="Top" Height="42" Click="salvarButton_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
+        <Button x:Name="salvarButton" Content="Salvar" Margin="102,649,120.094,0" VerticalAlignment="Top" Height="42" Click="cadastrar_cliente" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFA1FF9C" Offset="0"/>
@@ -63,7 +63,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="119.906,649,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Click="buttonCancelar_Click" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
+        <Button x:Name="buttonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="119.906,649,0,0" VerticalAlignment="Top" Width="161" Height="42" Grid.Column="1" Click="voltar" BorderBrush="{x:Null}" FontFamily="NewsGoth Lt BT" FontSize="14">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFD8D8" Offset="0"/>

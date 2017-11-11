@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="funcionarioMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closed="funcWin_Closed">
+        Title="funcionarioMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closed="window_close">
     <Grid Margin="0,0,-1.208,-0.094">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -27,12 +27,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="buttonCadastra_Click">
+        <Button x:Name="buttonCadastra" Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="971,244,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="cadastrar_funcionario">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="buttonRemove_Click">
+        <Button x:Name="buttonRemove" Content="Remover Funcionário" HorizontalAlignment="Left" Margin="971,294,0,0" VerticalAlignment="Top" Width="246" Height="41" FontSize="18" FontWeight="Bold" Foreground="Black" BorderBrush="Black" FontFamily="NewsGoth Lt BT" Background="#FFACACAC" Click="excluir_funcionario">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10"/>
             </Button.Effect>

@@ -26,7 +26,7 @@
         <TextBox x:Name="boxSenha" HorizontalAlignment="Left" Height="23" Margin="168,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
         <Label x:Name="labelNome_Copy" Content="Login do Funcionário: " HorizontalAlignment="Left" Margin="20,106,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontFamily="NewsGoth Lt BT"/>
         <TextBox x:Name="boxLogin" HorizontalAlignment="Left" Height="23" Margin="168,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Background="#FF1F1F1F" Foreground="White" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonSalvar" Content="Salvar" Margin="188,165,84.189,0" VerticalAlignment="Top" Height="39" BorderBrush="{x:Null}" Click="buttonSalvar_Click">
+        <Button x:Name="buttonSalvar" Content="Salvar" Margin="188,165,84.189,0" VerticalAlignment="Top" Height="39" BorderBrush="{x:Null}" Click="cadastra_funcionario">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD2FFD5" Offset="0"/>
@@ -34,7 +34,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonCancela" Content="Cancelar" HorizontalAlignment="Left" Margin="84.811,165,0,0" VerticalAlignment="Top" Width="110" Height="39" BorderBrush="{x:Null}" Grid.Column="1" Click="buttonCancela_Click">
+        <Button x:Name="buttonCancela" Content="Cancelar" HorizontalAlignment="Left" Margin="84.811,165,0,0" VerticalAlignment="Top" Width="110" Height="39" BorderBrush="{x:Null}" Grid.Column="1" Click="voltar">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFD8D8" Offset="0"/>
