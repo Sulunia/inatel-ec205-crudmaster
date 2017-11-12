@@ -20,9 +20,10 @@ namespace CrudMaster
             this.preco = preco;
             this.fabricante = fabricante;
         }
-        public string aux()
+        public override string ToString()
         {
-            return $"{nome}/{quantidade}/{preco}/{fabricante}";
+            string result = $"{nome}/{quantidade}/{preco}/{fabricante}";
+            return result;
         }
     }
 }
