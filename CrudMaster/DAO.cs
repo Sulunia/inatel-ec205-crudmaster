@@ -38,7 +38,7 @@ namespace CrudMaster
         public static void cadastrar_produto(Produto prod)
         {
             produtoLista.Add(prod);
-            File.AppendAllText((path + @"\Produtos.txt"), prod.aux() + Environment.NewLine);
+            File.AppendAllText((path + @"\Produtos.txt"), prod.ToString() + Environment.NewLine);
         }
 
         public static void exibeProdutos(produtoMain pM)
