@@ -45,7 +45,7 @@ namespace CrudMaster
             {
                 foreach (Funcionario item in DAO.funcionarioLista)
                 {
-                    if(String.Equals(item.username, usernameBox.Text))
+                    if(String.Equals(item.usuario, usernameBox.Text))
                     {
                         if(String.Equals(item.senha, passwordInput.Password.ToString()))
                         {

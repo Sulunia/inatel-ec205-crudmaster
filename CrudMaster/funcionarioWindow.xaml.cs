@@ -41,7 +41,7 @@ namespace CrudMaster
             funcView.Items.Clear();
             foreach (Funcionario e in DAO.funcionarioLista)
             {
-                var row = new { Nome = e.nome, Login = e.username };
+                var row = new { Nome = e.nome, Login = e.usuario };
                 funcView.Items.Add(row);
             }
         }

@@ -41,7 +41,7 @@ namespace CrudMaster
             {
                 p.nome = boxNome.Text;
                 p.senha = boxSenha.Text;
-                p.username = boxLogin.Text;
+                p.usuario = boxLogin.Text;
                 DAO.cadastrar_funcionario(p);
                 MessageBox.Show("Cadastrado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                 janAnterior.listar_funcionarios();
