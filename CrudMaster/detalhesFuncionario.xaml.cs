@@ -22,7 +22,7 @@ namespace CrudMaster
     {
         //Membros =========================================
         private Funcionario p;
-        funcionarioWindow janAnterior;
+        private funcionarioWindow janAnterior;
 
         //Construtores ====================================
         public detalhesFuncionario(funcionarioWindow e)

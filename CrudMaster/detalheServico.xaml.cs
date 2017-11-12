@@ -40,7 +40,7 @@ namespace CrudMaster
 
         private void cadastrar_servico(object sender, RoutedEventArgs e)
         {
-            if(checaPalavra(boxDescricao.Text) == false)
+            if(checa_palavra(boxDescricao.Text) == false)
                 MessageBox.Show("Por favor prencha todos os campos corretamente.\nNão use caracteres especiais como: '#', '%' e ':'.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
             else
             {
@@ -51,7 +51,7 @@ namespace CrudMaster
             }            
         }
 
-        private bool checaPalavra(string checa)
+        private bool checa_palavra(string checa)
         {
             int value;
             foreach (char c in checa)

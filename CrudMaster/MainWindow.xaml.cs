@@ -32,7 +32,7 @@ namespace CrudMaster
         }
 
         //Métodos
-        private void loginSubmit(object sender, RoutedEventArgs e)
+        private void login_submit(object sender, RoutedEventArgs e)
         {
             //Verifica se o login existe:
             if (String.Equals(usernameBox.Text, "admin") && String.Equals(passwordInput.Password.ToString(), "crudmaster"))
