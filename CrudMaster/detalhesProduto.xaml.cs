@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,7 +82,7 @@ namespace CrudMaster
 
                     MessageBox.Show("Edição realizada com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                     this.Close();
-                    DAO.exibeProdutos(pM);
+                    pM.listar_produtos(pM);
                 }
             }
             else
@@ -95,7 +96,7 @@ namespace CrudMaster
                     DAO.cadastrar_produto(new Produto(boxNome.Text, int.Parse(comboNum.Text), boxPreco.Text, boxFabr.Text));
                     MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
                     this.Close();
-                    DAO.exibeProdutos(pM);
+                    pM.listar_produtos(pM);
                 }
             }
         }
@@ -139,15 +140,15 @@ namespace CrudMaster
             foreach (char c in checa)
             {
                 value = Convert.ToInt32(c);
-                if ((value < 65) || (value > 90))
-                    if ((value < 97) || (value > 122))
-                        if ((value > 57) || (value < 48))
+                if(value != 32)
+                  if ((value < 65) || (value > 90))
+                      if ((value < 97) || (value > 122))
+                          if ((value > 57) || (value < 48))
                             return false;               
                 
             }
             return true;
         }
-
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace CrudMaster
         public produtoMain()
         {
             InitializeComponent();
-            DAO.exibeProdutos(this);
+            listar_produtos(this);
         }
 
         //Métodos ===============================
@@ -69,7 +70,7 @@ namespace CrudMaster
             }
         }
 
-        private void excluir_produto(object sender, RoutedEventArgs e)
+        public void excluir_produto(object sender, RoutedEventArgs e)
         {
             if (listaProduto.SelectedItem != null)
             {
@@ -97,9 +98,23 @@ namespace CrudMaster
                 if(result == MessageBoxResult.Yes)
                 {
                     DAO.excluir_produto(p2);
-                    DAO.exibeProdutos(this);
+                    this.listar_produtos(this); //Essa linha tho
                 }                          
             }
+        }
+
+        public void listar_produtos(produtoMain pM)
+        {
+            pM.listaProduto.Items.Clear();
+            StreamReader produtoFile = new StreamReader((DAO.path + @"\Produtos.txt"));
+            string line;
+            while ((line = produtoFile.ReadLine()) != null)
+            {
+                string[] parts = line.Split('/');
+                var row = new { Nome = parts[0], Quantidade = parts[1], Preço = parts[2], Fabricante = parts[3] };
+                pM.listaProduto.Items.Add(row);
+            }
+            produtoFile.Close();
         }
 
         //TODO: Remover método de listagem de produtos do DAO para cá.

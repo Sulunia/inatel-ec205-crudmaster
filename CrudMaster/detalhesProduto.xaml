@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="detalhesProduto" Height="303.623" Width="773.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Detalhes do produto" Height="303.623" Width="773.191" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

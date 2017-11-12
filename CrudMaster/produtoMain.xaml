@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudMaster"
         mc:Ignorable="d"
-        Title="produtoMain" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" Closed="window_close" ResizeMode="CanMinimize">
+        Title="Lista de produtos" Height="668.178" Width="1222.243" WindowStartupLocation="CenterScreen" Closed="window_close" ResizeMode="CanMinimize">
     <Grid Margin="0,0,-1.208,-0.094">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="774*"/>
@@ -24,7 +24,6 @@
                     <GridViewColumn Header="Quantidade" Width="150" DisplayMemberBinding="{Binding Path=Quantidade}"/>
                     <GridViewColumn Header="Preço" Width="200" DisplayMemberBinding="{Binding Path=Preço}" />
                     <GridViewColumn Header="Fabricante" Width="370" DisplayMemberBinding="{Binding Path=Fabricante}"/>
-                    <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>

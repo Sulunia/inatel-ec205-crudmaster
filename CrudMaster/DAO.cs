@@ -41,20 +41,6 @@ namespace CrudMaster
             File.AppendAllText((path + @"\Produtos.txt"), prod.ToString() + Environment.NewLine);
         }
 
-        public static void exibeProdutos(produtoMain pM)
-        {
-            pM.listaProduto.Items.Clear();
-            produtoFile = new StreamReader((path + @"\Produtos.txt"));
-            string line;       
-            while ((line = produtoFile.ReadLine()) != null)
-            {
-                string[] parts = line.Split('/');
-                var row = new { Nome = parts[0], Quantidade = parts[1], Preço = parts[2], Fabricante = parts[3] };
-                pM.listaProduto.Items.Add(row);
-            }
-            produtoFile.Close();
-        }
-
         public static void edita_produto(Produto antigo, Produto novo)
         {
             string text = File.ReadAllText(path + @"\Produtos.txt");
