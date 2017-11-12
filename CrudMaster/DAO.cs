@@ -81,6 +81,9 @@ namespace CrudMaster
         public static void inicializar_dados()
         {
             string line;
+            pessoaLista.Clear();
+            funcionarioLista.Clear();
+            produtoLista.Clear();
 
             Debug.WriteLine("[DAO] Preparing to read file: " + path + @"\Clientes.txt!");
             if (File.Exists(path+ @"\Clientes.txt") == false)
